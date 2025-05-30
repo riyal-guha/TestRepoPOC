@@ -19,6 +19,7 @@ View all tickets in all status
 logout"""
     }
 }
+
 print(json.dumps(data, indent=2))
 
 llm = ChatGoogleGenerativeAI(model='gemini-2.0-flash-exp')
