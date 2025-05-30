@@ -29,4 +29,4 @@ jobs:
 
             - name: Run Python Script
               run: |
-                python python-script/test.py
+                python scripts/main.py
