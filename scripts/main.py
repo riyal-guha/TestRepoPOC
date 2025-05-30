@@ -19,8 +19,6 @@ logout"""
     }
 }
 print(json.dumps(data, indent=2))
-# OPENAI_API_KEY = os.getenv('OPENAI_API_KEY') 
-# print(ap_key)
 
 llm = ChatOpenAI(
 	model='gpt-4o',
