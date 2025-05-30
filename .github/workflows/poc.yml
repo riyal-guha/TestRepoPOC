@@ -30,6 +30,7 @@ jobs:
             - name: Install dependencies
               run: |
                 pip install browser-use
+                playwright install
 
             - name: Run Python Script
               run: |
