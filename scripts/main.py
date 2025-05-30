@@ -19,11 +19,11 @@ logout"""
     }
 }
 print(json.dumps(data, indent=2))
-
+print(os.environ['OPENAI_API_KEY'])
 llm = ChatOpenAI(
 	model='gpt-4o',
 	temperature=0.0,
-	api_key=os.environ['OPENAI_API_KEY']
+	api_key=os.environ['OPENAI_API_KEY'],
 )
 task = 'Go to amazon.com, search for laptop'
 agent = Agent(task=task, llm=llm)
