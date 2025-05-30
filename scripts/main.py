@@ -1,7 +1,7 @@
 import json
 import asyncio
 import os
-from langchain_openai import AzureChatOpenAI
+from langchain_openai import ChatOpenAI
 
 from browser_use import Agent
 data = {
