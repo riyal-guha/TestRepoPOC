@@ -1,0 +1,32 @@
+name: POC Python
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+    python-script:
+        runs-on: ubuntu-latest
+
+        defaults:
+          run:
+            working-directory: ./
+
+        steps:
+
+            - name: checkout repo content
+              uses: actions/checkout@v3
+
+            - name: Set up Python
+              uses: actions/setup-python@v4
+              with:
+                python-version: '3.11'
+
+            - name: Install dependencies
+              run: |
+                pip install browser-use
+
+            - name: Run Python Script
+              run: |
+                python python-script/test.py
