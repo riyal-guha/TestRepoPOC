@@ -28,7 +28,6 @@ llm = ChatOpenAI(
 task = 'Go to amazon.com, search for laptop'
 agent = Agent(task=task, llm=llm)
 
-
 async def main():
 	await agent.run()
 
