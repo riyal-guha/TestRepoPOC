@@ -13,6 +13,9 @@ jobs:
           run:
             working-directory: ./
 
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
         steps:
 
             - name: checkout repo content
