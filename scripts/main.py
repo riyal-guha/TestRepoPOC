@@ -1,8 +1,9 @@
 import json
 import asyncio
 import os
-from langchain_openai import ChatOpenAI
-
+from langchain_google_genai import ChatGoogleGenerativeAI
+from dotenv import load_dotenv
+load_dotenv()
 from browser_use import Agent
 data = {
     "messageId": "12345",
@@ -20,16 +21,14 @@ logout"""
 }
 print(json.dumps(data, indent=2))
 
-llm = ChatOpenAI(
-	model='gpt-4o',
-	temperature=0.0,
-)
-task = 'Go to amazon.com, search for laptop'
-agent = Agent(task=task, llm=llm)
+llm = ChatGoogleGenerativeAI(model='gemini-2.0-flash-exp')
 
 async def main():
-	await agent.run()
+    agent = Agent(
+        task="Go to amazon.com and search for laptops",
+        llm=llm,
+    )
+    result = await agent.run()
+    print(result)
 
-
-if __name__ == '__main__':
-	asyncio.run(main())
+asyncio.run(main())
