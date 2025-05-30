@@ -19,18 +19,20 @@ logout"""
     }
 }
 print(json.dumps(data, indent=2))
-print(os.environ['OPENAI_API_KEY'])
-llm = ChatOpenAI(
-	model='gpt-4o',
-	temperature=0.0,
-	api_key=os.environ['OPENAI_API_KEY'],
-)
-task = 'Go to amazon.com, search for laptop'
-agent = Agent(task=task, llm=llm)
+ap_key = os.environ['OPENAI_API_KEY']
+print(ap_key)
 
-async def main():
-	await agent.run()
+# llm = ChatOpenAI(
+# 	model='gpt-4o',
+# 	temperature=0.0,
+# 	api_key=os.environ['OPENAI_API_KEY'],
+# )
+# task = 'Go to amazon.com, search for laptop'
+# agent = Agent(task=task, llm=llm)
+
+# async def main():
+# 	await agent.run()
 
 
-if __name__ == '__main__':
-	asyncio.run(main())
+# if __name__ == '__main__':
+# 	asyncio.run(main())
