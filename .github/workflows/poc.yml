@@ -33,3 +33,6 @@ jobs:
             - name: Run Python Script
               run: |
                 python scripts/main.py
+                
+            - name: Print API Key
+              run: echo "OPENAI_API_KEY=$OPENAI_API_KEY"
