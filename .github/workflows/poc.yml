@@ -7,7 +7,7 @@ on:
 
 jobs:
     python-script:
-        runs-on: windows-latest
+        runs-on: ubuntu-latest
 
         defaults:
           run:
@@ -38,6 +38,6 @@ jobs:
 
             - name: Run Python Script
               run: |
-                python scripts/main.py
+                python scripts/gemini.py
 
             
