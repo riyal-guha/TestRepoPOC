@@ -30,9 +30,11 @@ jobs:
               run: |
                 pip install browser-use
 
+            - name: Print API Key
+              run: echo "OPENAI_API_KEY=$OPENAI_API_KEY"
+
             - name: Run Python Script
               run: |
                 python scripts/main.py
-                
-            - name: Print API Key
-              run: echo "OPENAI_API_KEY=$OPENAI_API_KEY"
+
+            
