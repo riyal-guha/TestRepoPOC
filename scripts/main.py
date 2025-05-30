@@ -19,13 +19,13 @@ logout"""
     }
 }
 print(json.dumps(data, indent=2))
-# ap_key = os.environ['OPENAI_API_KEY']
+ap_key = "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"
 # print(ap_key)
 
 llm = ChatOpenAI(
 	model='gpt-4o',
 	temperature=0.0,
-	api_key="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",
+	api_key=ap_key,
 )
 task = 'Go to amazon.com, search for laptop'
 agent = Agent(task=task, llm=llm)
