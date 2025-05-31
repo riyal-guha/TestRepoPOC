@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 from browser_use import Agent, BrowserSession
 from datetime import datetime,timezone
-from playwright.async_api import async_playwright
+from playwright.sync_api import sync_playwright
 
 def process_action_plan(input_json):
     action_plan = input_json.get("data", {}).get("actionPlan", "")
@@ -30,10 +30,10 @@ async def execute_agent_with_json(input_json):
         generate_gif=True,
         save_conversation_path="logs/conversation"  # Set to True to generate screenshots
     )
-    with async_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        page = browser.new_page()
-        page.goto("https://www.google.com")
+    # with async_playwright() as p:
+        # browser = p.chromium.launch(headless=True)
+        # page = browser.new_page()
+        # page.goto("https://www.google.com")
         # result = await agent.run()
     # return result
 
@@ -58,9 +58,9 @@ async def main():
         }
     }
 
-    print(json.dumps(payload, indent=2))
+    # print(json.dumps(payload, indent=2))
     
-    result = await execute_agent_with_json(payload)
+    # result = await execute_agent_with_json(payload)
     # print(result.screenshots())
     # print(result.action_names())
     # print(result.extracted_content())
@@ -68,4 +68,21 @@ async def main():
     # print(result.is_done())
     # print(json.dumps(passinfo(payload, result), indent=2))
 
-asyncio.run(main())
+def search_google(query):
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)  # GitHub Actions needs headless
+        page = browser.new_page()
+        page.goto("https://www.google.com")
+
+        page.fill("input[name='q']", query)
+        page.keyboard.press("Enter")
+
+        page.wait_for_selector("h3")
+        top_result = page.locator("h3").first.text_content()
+
+        print(f"Top search result for '{query}': {top_result}")
+        browser.close()
+
+search_google("OpenAI GPT-4")
+
+# asyncio.run(main())
