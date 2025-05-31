@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 from browser_use import Agent, BrowserSession
 from datetime import datetime,timezone
-from playwright.sync_api import sync_playwright
+from playwright.async_api import async_playwright
 
 def process_action_plan(input_json):
     action_plan = input_json.get("data", {}).get("actionPlan", "")
@@ -30,7 +30,8 @@ async def execute_agent_with_json(input_json):
         generate_gif=True,
         save_conversation_path="logs/conversation"  # Set to True to generate screenshots
     )
-    with sync_playwright() as p:
+    with async_playwright() as p:
+        browser = p.chromium.launch(headless=True)
         result = await agent.run()
     return result
 
