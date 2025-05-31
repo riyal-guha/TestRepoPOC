@@ -32,8 +32,10 @@ async def execute_agent_with_json(input_json):
     )
     with async_playwright() as p:
         browser = p.chromium.launch(headless=True)
-        result = await agent.run()
-    return result
+        page = browser.new_page()
+        page.goto("https://www.google.com")
+        # result = await agent.run()
+    # return result
 
 def passinfo(payload,result):
     modified_payload = payload.copy()
@@ -63,7 +65,7 @@ async def main():
     # print(result.action_names())
     # print(result.extracted_content())
     # print(result.model_actions())
-    print(result.is_done())
-    print(json.dumps(passinfo(payload, result), indent=2))
+    # print(result.is_done())
+    # print(json.dumps(passinfo(payload, result), indent=2))
 
 asyncio.run(main())
