@@ -25,7 +25,8 @@ async def execute_agent_with_json(input_json):
         task=action_plan,
         initial_actions=initial_actions,
         llm=llm,
-        browser_session=browser_session,
+        browser_session=browser_session,  # Set to True to generate GIFs
+        generate_gif=True,  # Set to True to generate screenshots
     )
     result = await agent.run()
     return result
