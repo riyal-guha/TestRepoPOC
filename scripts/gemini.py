@@ -29,8 +29,12 @@ def process_action_plan(input_json):
 async def execute_agent_with_json(input_json):
     action_plan = process_action_plan(input_json)
     llm = ChatGoogleGenerativeAI(model='gemini-2.0-flash-exp')
+    initial_actions = [
+	{'open_tab': {'url': 'https://www.google.com'}},
+]
     agent = Agent(
         task=action_plan,
+        initial_actions=initial_actions,
         llm=llm,
     )
     result = await agent.run()
@@ -44,9 +48,9 @@ async def main():
         "data": {
             "flowId": "flowId123",
             "userId": "pnl0usXX",
-            "nlp": "Go to amazon and search",
+            "nlp": "Go to amazon.com and search",
             "actionPlan": """Go to amazon.com and search for macbook pro
-            then close the browser"""
+            then close the tab"""
         }
     }
 
