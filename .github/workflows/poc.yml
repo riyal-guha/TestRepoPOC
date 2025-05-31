@@ -32,6 +32,7 @@ jobs:
             - name: Install dependencies
               run: |
                 pip install browser-use
+                pip install pytest playwright
                 playwright install
 
             - run: playwright install chrome
@@ -39,6 +40,6 @@ jobs:
 
             - name: Run Python Script
               run: |
-                python scripts/gemini.py
+                pytest scripts/test_sample.py
 
             
