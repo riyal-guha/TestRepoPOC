@@ -68,21 +68,36 @@ async def main():
     # print(result.is_done())
     # print(json.dumps(passinfo(payload, result), indent=2))
 
+# from playwright.sync_api import sync_playwright
+
 def search_google(query):
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)  # GitHub Actions needs headless
-        page = browser.new_page()
-        page.goto("https://www.google.com")
+        browser = p.chromium.launch(headless=True)
+        context = browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100 Safari/537.36")
+        page = context.new_page()
 
-        page.fill("input[name='q']", query)
+        print("Opening Google...")
+        page.goto("https://www.google.com", timeout=60000)
+
+        # Accept cookies if the consent form appears (EU regions)
+        try:
+            page.locator('button:has-text("Accept all")').click(timeout=5000)
+        except:
+            pass  # Skip if not present
+
+        print("Waiting for search box...")
+        page.wait_for_selector('input[name="q"]', timeout=10000)
+        page.fill('input[name="q"]', query)
         page.keyboard.press("Enter")
 
-        page.wait_for_selector("h3")
+        print("Waiting for results...")
+        page.wait_for_selector("h3", timeout=10000)
         top_result = page.locator("h3").first.text_content()
 
-        print(f"Top search result for '{query}': {top_result}")
+        print(f"Top result for '{query}': {top_result}")
         browser.close()
 
 search_google("OpenAI GPT-4")
+
 
 # asyncio.run(main())
