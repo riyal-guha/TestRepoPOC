@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - feature/Saswata
 
 jobs:
     python-script:
@@ -27,14 +28,14 @@ jobs:
               with:
                 python-version: '3.11'
 
-            
-            - uses: browser-actions/setup-chrome@v1
-            - run: chrome --version
 
             - name: Install dependencies
               run: |
                 pip install browser-use
                 playwright install
+
+            - run: playwright install chrome
+            - run: playwright install chromium
 
             - name: Run Python Script
               run: |
