@@ -157,71 +157,71 @@ India
 	[28]<i >Next slide />
 You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery.
 [29]<a >Click here to go to amazon.in />
-Top categories in Kitchen appliances
-[30]<a aria-label='Cooker' />
+Get your game on
+[30]<a >Shop gaming
+Shop gaming />
 	[31]<div  />
 		[32]<div  />
-	[33]<span  />
-		[34]<span >Cooker
-Cooker />
-[35]<a aria-label='Coffee' />
-	[36]<div  />
-		[37]<div  />
-	[38]<span  />
-		[39]<span >Coffee
-Coffee />
-[40]<a aria-label='Pots and Pans' />
-	[41]<div  />
-		[42]<div  />
-	[43]<span  />
-		[44]<span >Pots and Pans
-Pots and Pans />
-[45]<a aria-label='Kettles' />
-	[46]<div  />
-		[47]<div  />
-	[48]<span  />
-		[49]<span >Kettles
-Kettles />
-Get your game on
-[50]<a >Shop gaming
-Shop gaming />
-	[51]<div  />
-		[52]<div  />
 Shop for your home essentials
-[53]<a aria-label='Cleaning Tools' />
-	[54]<div  />
-	[55]<div >Cleaning Tools />
-[56]<a aria-label='Home Storage' />
-	[57]<div  />
-	[58]<div >Home Storage />
-[59]<a aria-label='Home Decor' />
-	[60]<div  />
-	[61]<div >Home Decor />
-[62]<a aria-label='Bedding' />
-	[63]<div  />
-	[64]<div >Bedding />
+[33]<a aria-label='Cleaning Tools' />
+	[34]<div  />
+	[35]<div >Cleaning Tools />
+[36]<a aria-label='Home Storage' />
+	[37]<div  />
+	[38]<div >Home Storage />
+[39]<a aria-label='Home Decor' />
+	[40]<div  />
+	[41]<div >Home Decor />
+[42]<a aria-label='Bedding' />
+	[43]<div  />
+	[44]<div >Bedding />
 Shop Fashion for less
-[65]<a aria-label='Jeans under $50' />
-	[66]<div  />
-	[67]<div >Jeans under $50 />
-[68]<a aria-label='Tops under $25' />
-	[69]<div  />
-	[70]<div >Tops under $25 />
-[71]<a aria-label='Dresses under $30' />
-	[72]<div  />
-	[73]<div >Dresses under $30 />
-[74]<a aria-label='Shoes under $50' />
-	[75]<div  />
-	[76]<div >Shoes under $50 />
+[45]<a aria-label='Jeans under $50' />
+	[46]<div  />
+	[47]<div >Jeans under $50 />
+[48]<a aria-label='Tops under $25' />
+	[49]<div  />
+	[50]<div >Tops under $25 />
+[51]<a aria-label='Dresses under $30' />
+	[52]<div  />
+	[53]<div >Dresses under $30 />
+[54]<a aria-label='Shoes under $50' />
+	[55]<div  />
+	[56]<div >Shoes under $50 />
+Top categories in Kitchen appliances
+[57]<a aria-label='Cooker' />
+	[58]<div  />
+		[59]<div  />
+	[60]<span  />
+		[61]<span >Cooker
+Cooker />
+[62]<a aria-label='Coffee' />
+	[63]<div  />
+		[64]<div  />
+	[65]<span  />
+		[66]<span >Coffee
+Coffee />
+[67]<a aria-label='Pots and Pans' />
+	[68]<div  />
+		[69]<div  />
+	[70]<span  />
+		[71]<span >Pots and Pans
+Pots and Pans />
+[72]<a aria-label='Kettles' />
+	[73]<div  />
+		[74]<div  />
+	[75]<span  />
+		[76]<span >Kettles
+Kettles />
 ... 4926 pixels below - scroll or extract content to see more ...
-Current step: 2/100Current date and time: 2025-05-31 15:41
+Current step: 2/100Current date and time: 2025-05-31 16:04
 
  RESPONSE
 {
   "current_state": {
-    "evaluation_previous_goal": "Success - I have successfully navigated to amazon.com",
-    "memory": "I have navigated to amazon.com",
-    "next_goal": "Input text 'macbook pro' in the search bar."
+    "evaluation_previous_goal": "Success - I successfully navigated to Amazon.com",
+    "memory": "I have navigated to Amazon.com.",
+    "next_goal": "Input \"macbook pro\" into the search bar."
   },
   "action": [
     {

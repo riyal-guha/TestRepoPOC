@@ -140,14 +140,14 @@ India
 [24]<a >Terms />
 [25]<div aria-expanded='false' role='button'>Settings />
 [End of page]
-Current step: 1/100Current date and time: 2025-05-31 15:41
+Current step: 1/100Current date and time: 2025-05-31 16:04
 
  RESPONSE
 {
   "current_state": {
-    "evaluation_previous_goal": "Unknown - I have just opened a new tab with Google. I need to search on google for the query provided.",
-    "memory": "I have opened a new tab with Google.",
-    "next_goal": "Go to amazon.com"
+    "evaluation_previous_goal": "Unknown - I have just started the task and need to navigate to Amazon.com.",
+    "memory": "I have not yet begun the task.",
+    "next_goal": "Navigate to Amazon.com"
   },
   "action": [
     {

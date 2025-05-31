@@ -5,7 +5,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
 load_dotenv()
 from browser_use import Agent, BrowserSession
-from datetime import datetime
+from datetime import datetime,timezone
 
 def process_action_plan(input_json):
     action_plan = input_json.get("data", {}).get("actionPlan", "")
@@ -33,6 +33,12 @@ async def execute_agent_with_json(input_json):
     result = await agent.run()
     return result
 
+def passinfo(payload,result):
+    modified_payload = payload.copy()
+    modified_payload['eventType'] = "ExecutionEngine"
+    modified_payload['timestamp'] = datetime.now(timezone.utc).isoformat()
+    modified_payload['data']['action_status'] = result.is_done()
+    return modified_payload
 
 async def main():
     payload = {
@@ -56,5 +62,6 @@ async def main():
     # print(result.extracted_content())
     # print(result.model_actions())
     print(result.is_done())
+    print(json.dumps(passinfo(payload, result), indent=2))
 
 asyncio.run(main())
