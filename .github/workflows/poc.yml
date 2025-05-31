@@ -35,7 +35,7 @@ jobs:
                 playwright install
 
             - run: playwright install chrome
-            - run: playwright install chromium
+            - run: playwright install chromium  --no-sandbox
 
             - name: Run Python Script
               run: |
