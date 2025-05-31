@@ -5,6 +5,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
 load_dotenv()
 from browser_use import Agent, BrowserSession
+from datetime import datetime
 
 def process_action_plan(input_json):
     action_plan = input_json.get("data", {}).get("actionPlan", "")
@@ -26,10 +27,12 @@ async def execute_agent_with_json(input_json):
         initial_actions=initial_actions,
         llm=llm,
         browser_session=browser_session,  # Set to True to generate GIFs
-        generate_gif=True,  # Set to True to generate screenshots
+        generate_gif=True,
+        save_conversation_path="logs/conversation"  # Set to True to generate screenshots
     )
     result = await agent.run()
     return result
+
 
 async def main():
     payload = {
@@ -48,10 +51,10 @@ async def main():
     print(json.dumps(payload, indent=2))
     
     result = await execute_agent_with_json(payload)
-    print(result.screenshots())
-    print(result.action_names())
-    print(result.extracted_content())
-    print(result.model_actions())
+    # print(result.screenshots())
+    # print(result.action_names())
+    # print(result.extracted_content())
+    # print(result.model_actions())
     print(result.is_done())
 
 asyncio.run(main())
