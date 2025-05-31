@@ -40,6 +40,6 @@ jobs:
 
             - name: Run Python Script
               run: |
-                pytest scripts/test_sample.py
+                python scripts/gemini.py
 
             

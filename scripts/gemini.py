@@ -4,23 +4,9 @@ import os
 from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
 load_dotenv()
-from browser_use import Agent
-# data = {
-#     "messageId": "12345",
-#     "eventType": "CreateActionPlan",
-#     "timestamp": "2025-05-20T12:34:56Z",
-#     "data": {
-#         "flowId": "flowId123",
-#         "userId": "pnl0usXX",
-#         "nlp": "Login to SNOW and view all tickets in all status",
-#         "actionPlan": """Open https://aholddelhaize.service-now.com/
-# Login with user pnl0us72 and password xxxxxxxxx
-# View all tickets in all status
-# logout"""
-#     }
-# }
-
-# print(json.dumps(data, indent=2))
+from browser_use import Agent, BrowserSession
+from datetime import datetime,timezone
+from playwright.sync_api import sync_playwright
 
 def process_action_plan(input_json):
     action_plan = input_json.get("data", {}).get("actionPlan", "")
@@ -29,12 +15,31 @@ def process_action_plan(input_json):
 async def execute_agent_with_json(input_json):
     action_plan = process_action_plan(input_json)
     llm = ChatGoogleGenerativeAI(model='gemini-2.0-flash-exp')
+    initial_actions = [
+	{'open_tab': {'url': 'https://www.google.com'}},
+    ]
+    browser_session = BrowserSession(
+    headless = True,
+    chromium_sandbox = False
+    )
     agent = Agent(
         task=action_plan,
+        initial_actions=initial_actions,
         llm=llm,
+        browser_session=browser_session,  # Set to True to generate GIFs
+        generate_gif=True,
+        save_conversation_path="logs/conversation"  # Set to True to generate screenshots
     )
-    result = await agent.run()
+    with sync_playwright() as p:
+        result = await agent.run()
     return result
+
+def passinfo(payload,result):
+    modified_payload = payload.copy()
+    modified_payload['eventType'] = "ExecutionEngine"
+    modified_payload['timestamp'] = datetime.now(timezone.utc).isoformat()
+    modified_payload['data']['action_status'] = result.is_done()
+    return modified_payload
 
 async def main():
     payload = {
@@ -44,15 +49,20 @@ async def main():
         "data": {
             "flowId": "flowId123",
             "userId": "pnl0usXX",
-            "nlp": "Go to amazon and search",
+            "nlp": "Go to amazon.com and search",
             "actionPlan": """Go to amazon.com and search for macbook pro
-            then close the browser"""
+            """
         }
     }
 
     print(json.dumps(payload, indent=2))
     
     result = await execute_agent_with_json(payload)
-    print(result)
+    # print(result.screenshots())
+    # print(result.action_names())
+    # print(result.extracted_content())
+    # print(result.model_actions())
+    print(result.is_done())
+    print(json.dumps(passinfo(payload, result), indent=2))
 
 asyncio.run(main())
