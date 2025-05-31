@@ -4,23 +4,7 @@ import os
 from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
 load_dotenv()
-from browser_use import Agent
-# data = {
-#     "messageId": "12345",
-#     "eventType": "CreateActionPlan",
-#     "timestamp": "2025-05-20T12:34:56Z",
-#     "data": {
-#         "flowId": "flowId123",
-#         "userId": "pnl0usXX",
-#         "nlp": "Login to SNOW and view all tickets in all status",
-#         "actionPlan": """Open https://aholddelhaize.service-now.com/
-# Login with user pnl0us72 and password xxxxxxxxx
-# View all tickets in all status
-# logout"""
-#     }
-# }
-
-# print(json.dumps(data, indent=2))
+from browser_use import Agent, BrowserSession
 
 def process_action_plan(input_json):
     action_plan = input_json.get("data", {}).get("actionPlan", "")
@@ -32,10 +16,16 @@ async def execute_agent_with_json(input_json):
     initial_actions = [
 	{'open_tab': {'url': 'https://www.google.com'}},
 ]
+    browser_session = BrowserSession(
+    # Path to a specific Chromium-based executable (optional)
+    executable_path='C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+    # user_data_dir='~/.config/browseruse/profiles/default',   # this is the default
+)
     agent = Agent(
         task=action_plan,
         initial_actions=initial_actions,
         llm=llm,
+        browser_session=browser_session,
     )
     result = await agent.run()
     return result
