@@ -40,13 +40,17 @@ async def main():
             "userId": "pnl0usXX",
             "nlp": "Go to amazon.com and search",
             "actionPlan": """Go to amazon.com and search for macbook pro
-            then close the tab"""
+            """
         }
     }
 
     print(json.dumps(payload, indent=2))
     
     result = await execute_agent_with_json(payload)
-    print(result.final_result())
+    print(result.screenshots())
+    print(result.action_names())
+    print(result.extracted_content())
+    print(result.model_actions())
+    print(result.is_done())
 
 asyncio.run(main())
