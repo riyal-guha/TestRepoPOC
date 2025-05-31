@@ -5,5 +5,6 @@ python and pip should be installed
 pip install browser-use
 playright install
 
-Clone the repo and run the gemini.py locally to test
+Clone the repo and run the gemini.py locally to test.
+
 Create a .env file in the scripts folder and under GOOGLE_API_KEY place you gemini api key
