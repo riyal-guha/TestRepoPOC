@@ -53,6 +53,6 @@ async def main():
     print(json.dumps(payload, indent=2))
     
     result = await execute_agent_with_json(payload)
-    print(result)
+    print(result.final_result())
 
 asyncio.run(main())
