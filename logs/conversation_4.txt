@@ -83,7 +83,8 @@ Common action sequences:
   Your responses must be always JSON with the specified format.
 
  HumanMessage 
-Your ultimate task is: """Go to amazon.com and search for macbook pro
+Your ultimate task is: """1.Go to netflix.com
+            2. Go to the sign up page.
             """. If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
 
  HumanMessage 
@@ -108,7 +109,7 @@ Action result: 🔗  Opened new tab with https://www.google.com
 
 
  HumanMessage 
-Action result: 🔗  Navigated to https://www.amazon.com
+Action result: 🔍  Searched for "netflix" in Google
 
  AIMessage 
 
@@ -117,89 +118,39 @@ Action result: 🔗  Navigated to https://www.amazon.com
 
 
  HumanMessage 
-Action result: ⌨️  Input macbook pro into index 3
+Action result: 🖱️  Clicked button with index 21: Netflix - Watch TV Shows Online, Watch Movies Online
 
  HumanMessage 
 [Task history memory ends]
 [Current state starts here]
 The following is one-time information - if you need to remember it write it to memory:
-Current url: https://www.amazon.com/
+Current url: https://www.netflix.com/in/
 Available tabs:
-[TabInfo(page_id=0, url='https://www.amazon.com/', title='Amazon.com. Spend less. Smile more.', parent_page_id=None)]
+[TabInfo(page_id=0, url='https://www.google.com/', title='Google', parent_page_id=None), TabInfo(page_id=1, url='https://www.netflix.com/in/', title='Netflix India – Watch TV Shows Online, Watch Movies Online', parent_page_id=None)]
 Interactive elements from top layer of the current page inside the viewport:
 [Start of page]
-[0]<a aria-label='Amazon'>.us />
-[1]<a role='button' />
-	[2]<div >Deliver to
-India />
-*[3]*<input type='text' value='' name='field-keywords' placeholder='Search Amazon' aria-label='Search Amazon' role='searchbox' aria-expanded='true' />
-[4]<div  />
-	[5]<input type='submit' value='Go' />
-[6]<a aria-label='Choose a language for shopping in Amazon United States. The current selection is English (EN).
-' />
-	[7]<span  />
-		[8]<span >EN />
-[9]<button aria-label='Expand to Change Language or Country' />
-[10]<a >Account & Lists />
-	[11]<div >Hello, sign in />
-[12]<button aria-label='Expand Account and Lists' />
-[13]<a >Returns
-& Orders />
-[14]<a aria-label='0 items in cart' />
-	[15]<div >0 />
-	[16]<div >Cart />
-*[17]*<div role='gridcell' />
-	*[18]*<div role='button' aria-label='macbook air'>macbook
-air />
-*[19]*<div role='gridcell' />
-	*[20]*<div role='button' aria-label='macbook pro'>macbook
-pro />
-*[21]*<div role='gridcell' />
-	*[22]*<div role='button' aria-label='macbook pro m4'>macbook
-pro m4 />
-*[23]*<div role='gridcell' />
-	*[24]*<div role='button' aria-label='macbook air m4'>macbook
-air m4 />
-*[25]*<div role='gridcell' />
-	*[26]*<div role='button' aria-label='macbook air m2'>macbook
-air m2 />
-*[27]*<div role='gridcell' />
-	*[28]*<div role='button' aria-label='macbook air m3'>macbook
-air m3 />
-*[29]*<div role='gridcell' />
-	*[30]*<div role='button' aria-label='macbook air m1'>macbook
-air m1 />
-*[31]*<div role='gridcell' />
-	*[32]*<div role='button' aria-label='macbook pro m3'>macbook
-pro m3 />
-*[33]*<div role='gridcell' />
-	*[34]*<div role='button' aria-label='macbook pro 16 inch'>macbook
-pro 16 inch />
-*[35]*<div role='gridcell' />
-	*[36]*<div role='button' aria-label='macbook m4'>macbook
-m4 />
-We're showing you items that ship to
-India
-. To see items that ship to a different country, change your delivery address.
-[37]<span >Dismiss />
-	[38]<input type='submit' />
-[39]<span >Change Address />
-	[40]<input type='submit' />
-[41]<a role='button' aria-label='Open All Categories Menu' aria-expanded='false'>All />
-... 4926 pixels below - scroll or extract content to see more ...
-Current step: 3/100Current date and time: 2025-05-31 16:04
+[0]<select name='LanguageSelect'>English
+हिन्दी />
+[1]<a role='button'>Sign In />
+Unlimited movies, TV shows and more
+Starts at ₹149. Cancel at any time.
+Ready to watch? Enter your email to create or restart your membership.
+[2]<input type='email' name='email' value='' />
+[3]<button type='submit'>Get Started />
+... 2136 pixels below - scroll or extract content to see more ...
+Current step: 3/100Current date and time: 2025-06-01 11:22
 
  RESPONSE
 {
   "current_state": {
-    "evaluation_previous_goal": "Success - I have input \"macbook pro\" into the search bar.",
-    "memory": "I have navigated to Amazon.com and input \"macbook pro\" into the search bar.",
-    "next_goal": "Click the search button to search for \"macbook pro\"."
+    "evaluation_previous_goal": "I successfully navigated to netflix.com.",
+    "memory": "I need to go to netflix.com and then go to the sign-up page. I have navigated to netflix.com.",
+    "next_goal": "Go to the sign-up page."
   },
   "action": [
     {
       "click_element_by_index": {
-        "index": 5
+        "index": 3
       }
     }
   ]

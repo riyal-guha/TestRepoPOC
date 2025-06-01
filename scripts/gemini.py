@@ -48,8 +48,9 @@ async def main():
         "data": {
             "flowId": "flowId123",
             "userId": "pnl0usXX",
-            "nlp": "Go to amazon.com and search",
-            "actionPlan": """Go to amazon.com and search for macbook pro
+            "nlp": "Go to netflix.com and go to sign up page",
+            "actionPlan": """1.Go to netflix.com
+            2. Go to the sign up page.
             """
         }
     }

@@ -83,7 +83,8 @@ Common action sequences:
   Your responses must be always JSON with the specified format.
 
  HumanMessage 
-Your ultimate task is: """Go to amazon.com and search for macbook pro
+Your ultimate task is: """1.Go to netflix.com
+            2. Go to the sign up page.
             """. If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
 
  HumanMessage 
@@ -108,126 +109,117 @@ Action result: 🔗  Opened new tab with https://www.google.com
 
 
  HumanMessage 
-Action result: 🔗  Navigated to https://www.amazon.com
+Action result: 🔍  Searched for "netflix" in Google
 
  HumanMessage 
 [Task history memory ends]
 [Current state starts here]
 The following is one-time information - if you need to remember it write it to memory:
-Current url: https://www.amazon.com/
+Current url: https://www.google.com/search?q=netflix&udm=14
 Available tabs:
-[TabInfo(page_id=0, url='https://www.amazon.com/', title='Amazon.com. Spend less. Smile more.', parent_page_id=None)]
+[TabInfo(page_id=0, url='https://www.google.com/', title='Google', parent_page_id=None), TabInfo(page_id=1, url='https://www.google.com/search?q=netflix&udm=14', title='netflix - Google Search', parent_page_id=None)]
 Interactive elements from top layer of the current page inside the viewport:
 [Start of page]
-[0]<a aria-label='Amazon'>.us />
-[1]<a role='button' />
-	[2]<div >Deliver to
-India />
-[3]<input type='text' value='' name='field-keywords' placeholder='Search Amazon' aria-label='Search Amazon' role='searchbox' aria-expanded='false' />
-[4]<div  />
-	[5]<input type='submit' value='Go' />
-[6]<a aria-label='Choose a language for shopping in Amazon United States. The current selection is English (EN).
-' />
-	[7]<span  />
-		[8]<span >EN />
-[9]<button aria-label='Expand to Change Language or Country' />
-[10]<a >Account & Lists />
-	[11]<div >Hello, sign in />
-[12]<button aria-label='Expand Account and Lists' />
-[13]<a >Returns
-& Orders />
-[14]<a aria-label='0 items in cart' />
-	[15]<div >0 />
-	[16]<div >Cart />
-[17]<a >Sign in />
-New customer?
-[18]<a aria-label='New to Amazon? Start here to create an account'>Start here. />
-We're showing you items that ship to
-India
-. To see items that ship to a different country, change your delivery address.
-[19]<span >Dismiss />
-	[20]<input type='submit' />
-[21]<span >Change Address />
-	[22]<input type='submit' />
-[23]<a role='button' aria-label='Open All Categories Menu' aria-expanded='false'>All />
-[24]<a >Sell />
-[25]<a  />
-	[26]<i >Previous slide />
-[27]<a  />
-	[28]<i >Next slide />
-You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery.
-[29]<a >Click here to go to amazon.in />
-Get your game on
-[30]<a >Shop gaming
-Shop gaming />
-	[31]<div  />
-		[32]<div  />
-Shop for your home essentials
-[33]<a aria-label='Cleaning Tools' />
-	[34]<div  />
-	[35]<div >Cleaning Tools />
-[36]<a aria-label='Home Storage' />
-	[37]<div  />
-	[38]<div >Home Storage />
-[39]<a aria-label='Home Decor' />
-	[40]<div  />
-	[41]<div >Home Decor />
-[42]<a aria-label='Bedding' />
+[0]<a title='Go to Google Home' />
+[1]<textarea value='netflix' aria-label='Search' placeholder='' aria-expanded='false' name='q' role='combobox'>netflix />
+[2]<div  />
+	[3]<div aria-label='Clear' role='button' />
+[4]<div aria-label='Search by image' role='button' />
+[5]<button aria-label='Search' type='submit' />
+	[6]<div  />
+[7]<div aria-label='Settings' role='button' />
+	[8]<div >Quick Settings />
+[9]<a aria-label='Google apps' aria-expanded='false' role='button' />
+[10]<a >Sign in />
+[11]<a role='link'>All />
+[12]<a role='link'>Forums />
+[13]<a role='link'>Short videos />
+[14]<a role='link'>Flights />
+[15]<a role='link'>Web />
+[16]<a role='link'>Finance />
+[17]<a role='link'>Videos />
+[18]<div aria-expanded='false' role='button' />
+	[19]<div >More />
+[20]<div aria-expanded='false' role='button'>Tools />
+[21]<a >Netflix - Watch TV Shows Online, Watch Movies Online />
+	[22]<div  />
+		[23]<div  />
+			[24]<span  />
+				[25]<div  />
+			[26]<div  />
+				[27]<div >Netflix />
+				[28]<div >https://www.netflix.com />
+[29]<div aria-label='About this result for Netflix' role='button' />
+	[30]<span  />
+Netflix
+is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected ...
+[31]<a >Netflix – Apps on Google Play />
+	[32]<div  />
+		[33]<div  />
+			[34]<span  />
+				[35]<div  />
+			[36]<div  />
+				[37]<div >Google Play />
+				[38]<div  />
+					[39]<cite role='text'>https://play.google.com
+› store › apps › details › id=com... />
+[40]<div aria-label='About this result for Google Play' role='button' />
+	[41]<span  />
+We add TV shows and movies all the time.
+Browse new titles or search for your favorites
+, and stream videos right on your device. • The more you watch, the ...
+[42]<a >Netflix />
 	[43]<div  />
-	[44]<div >Bedding />
-Shop Fashion for less
-[45]<a aria-label='Jeans under $50' />
-	[46]<div  />
-	[47]<div >Jeans under $50 />
-[48]<a aria-label='Tops under $25' />
-	[49]<div  />
-	[50]<div >Tops under $25 />
-[51]<a aria-label='Dresses under $30' />
-	[52]<div  />
-	[53]<div >Dresses under $30 />
-[54]<a aria-label='Shoes under $50' />
-	[55]<div  />
-	[56]<div >Shoes under $50 />
-Top categories in Kitchen appliances
-[57]<a aria-label='Cooker' />
-	[58]<div  />
-		[59]<div  />
-	[60]<span  />
-		[61]<span >Cooker
-Cooker />
-[62]<a aria-label='Coffee' />
-	[63]<div  />
-		[64]<div  />
-	[65]<span  />
-		[66]<span >Coffee
-Coffee />
-[67]<a aria-label='Pots and Pans' />
-	[68]<div  />
-		[69]<div  />
-	[70]<span  />
-		[71]<span >Pots and Pans
-Pots and Pans />
-[72]<a aria-label='Kettles' />
-	[73]<div  />
-		[74]<div  />
-	[75]<span  />
-		[76]<span >Kettles
-Kettles />
-... 4926 pixels below - scroll or extract content to see more ...
-Current step: 2/100Current date and time: 2025-05-31 16:04
+		[44]<div  />
+			[45]<span  />
+				[46]<div  />
+			[47]<div  />
+				[48]<div >Wikipedia />
+				[49]<div  />
+					[50]<cite role='text'>https://en.wikipedia.org
+› wiki › Netflix />
+[51]<div aria-label='About this result for Wikipedia' role='button' />
+	[52]<span  />
+Netflix is
+an American subscription video on-demand over-the-top streaming service
+. The service primarily distributes original and acquired films and ...
+[53]<a >Netflix US (@netflix) • Instagram photos and videos />
+	[54]<div  />
+		[55]<div  />
+			[56]<span  />
+				[57]<div  />
+			[58]<div  />
+				[59]<div >Instagram · netflix />
+				[60]<div >3.7Cr+ followers />
+[61]<div aria-label='About this result for Instagram' role='button' />
+	[62]<span  />
+37M followers · 1.5K+ following · 10950 posts · @
+netflix
+: “~ official michael and lovie stan account ~”
+[63]<a >Netflix />
+	[64]<div  />
+		[65]<div  />
+			[66]<span  />
+				[67]<div  />
+			[68]<div  />
+				[69]<div >YouTube · Netflix />
+				[70]<div >3Cr+ followers />
+[71]<div aria-label='About this result for YouTube' role='button' />
+	[72]<span  />
+... 1010 pixels below - scroll or extract content to see more ...
+Current step: 2/100Current date and time: 2025-06-01 11:21
 
  RESPONSE
 {
   "current_state": {
-    "evaluation_previous_goal": "Success - I successfully navigated to Amazon.com",
-    "memory": "I have navigated to Amazon.com.",
-    "next_goal": "Input \"macbook pro\" into the search bar."
+    "evaluation_previous_goal": "Success - I have successfully searched for Netflix on Google.",
+    "memory": "I need to go to netflix.com and then go to the sign-up page. I have searched for Netflix on Google.",
+    "next_goal": "Go to netflix.com by clicking on the link in the google search results"
   },
   "action": [
     {
-      "input_text": {
-        "index": 3,
-        "text": "macbook pro"
+      "click_element_by_index": {
+        "index": 21
       }
     }
   ]

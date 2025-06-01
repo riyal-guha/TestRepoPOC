@@ -83,7 +83,8 @@ Common action sequences:
   Your responses must be always JSON with the specified format.
 
  HumanMessage 
-Your ultimate task is: """Go to amazon.com and search for macbook pro
+Your ultimate task is: """1.Go to netflix.com
+            2. Go to the sign up page.
             """. If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
 
  HumanMessage 
@@ -120,7 +121,7 @@ Interactive elements from top layer of the current page inside the viewport:
 [7]<input value='Google Search' aria-label='Google Search' name='btnK' role='button' type='submit' />
 [8]<input value='I'm Feeling Lucky' aria-label='I'm Feeling Lucky' name='btnI' type='submit' />
 🏏 Today's Googly:
-[9]<a role='link'>How many days did the longest test match last? />
+[9]<a role='link'>What is a diamond duck? />
 Google offered in:
 [10]<a >हिन्दी />
 [11]<a >বাংলা />
@@ -140,19 +141,19 @@ India
 [24]<a >Terms />
 [25]<div aria-expanded='false' role='button'>Settings />
 [End of page]
-Current step: 1/100Current date and time: 2025-05-31 16:04
+Current step: 1/100Current date and time: 2025-06-01 11:21
 
  RESPONSE
 {
   "current_state": {
-    "evaluation_previous_goal": "Unknown - I have just started the task and need to navigate to Amazon.com.",
-    "memory": "I have not yet begun the task.",
-    "next_goal": "Navigate to Amazon.com"
+    "evaluation_previous_goal": "Unknown - I have just started the task and need to search for Netflix on Google.",
+    "memory": "I need to go to netflix.com and then go to the sign-up page.",
+    "next_goal": "Search for netflix on google"
   },
   "action": [
     {
-      "go_to_url": {
-        "url": "https://www.amazon.com"
+      "search_google": {
+        "query": "netflix"
       }
     }
   ]
