@@ -20,3 +20,6 @@ verify in Docker Desktop UI and check logs
 For Integration with azure service bus emulator install 2 more dependencies
 pip install azure-servicebus
 pip install azure-identity
+
+The connection String is going to be
+"Endpoint=sb://localhost:5672;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=SAS_KEY_VALUE;UseDevelopmentEmulator=true;"
