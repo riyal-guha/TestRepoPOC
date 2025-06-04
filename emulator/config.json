@@ -72,12 +72,13 @@
                  },
                  "Rules": [
                    {
-                     "Name": "user-prop-filter-1",
+                     "Name": "json-create-action-plan",
                      "Properties": {
                        "FilterType": "Correlation",
                        "CorrelationFilter": {
+                        "ContentType": "application/json",
                          "Properties": {
-                           "prop3": "value3"
+                           "eventType": "ExecuteActionPlan"
                          }
                        }
                      }
@@ -102,7 +103,7 @@
        }
      ],
      "Logging": {
-       "Type": "File"
+       "Type": "Console"
      }
     }
     }
