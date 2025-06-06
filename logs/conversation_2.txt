@@ -83,9 +83,8 @@ Common action sequences:
   Your responses must be always JSON with the specified format.
 
  HumanMessage 
-Your ultimate task is: """1.Go to netflix.com
-            2. Go to the sign up page.
-            """. If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
+Your ultimate task is: """1. Go to netflix.com
+        2. Go to the sign up page.""". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
 
  HumanMessage 
 Example output:
@@ -111,44 +110,45 @@ Available tabs:
 [TabInfo(page_id=0, url='https://www.google.com/', title='Google', parent_page_id=None)]
 Interactive elements from top layer of the current page inside the viewport:
 [Start of page]
-[0]<a >Gmail />
-[1]<a aria-label='Search for Images '>Images />
-[2]<a aria-label='Google apps' aria-expanded='false' role='button' />
-[3]<a >Sign in />
-[4]<textarea title='Search' value='' aria-label='Search' placeholder='' aria-expanded='false' name='q' role='combobox' />
-[5]<div  />
-[6]<div aria-label='Search by image' role='button' />
-[7]<input value='Google Search' aria-label='Google Search' name='btnK' role='button' type='submit' />
-[8]<input value='I'm Feeling Lucky' aria-label='I'm Feeling Lucky' name='btnI' type='submit' />
-🏏 Today's Googly:
-[9]<a role='link'>What is a diamond duck? />
+[0]<a >About />
+[1]<a >Store />
+[2]<a >Gmail />
+[3]<a aria-label='Search for Images '>Images />
+[4]<a aria-label='Google apps' aria-expanded='false' role='button' />
+[5]<a >Sign in />
+[6]<textarea title='Search' value='' aria-label='Search' placeholder='' aria-expanded='false' name='q' role='combobox' />
+[7]<div  />
+[8]<div aria-label='Search by image' role='button' />
+[9]<input value='Google Search' aria-label='Google Search' name='btnK' role='button' type='submit' />
+[10]<input value='I'm Feeling Lucky' aria-label='I'm Feeling Lucky' name='btnI' type='submit' />
+Google Gemini,
+[11]<a role='link'>create a cricket quiz game to play with my friend />
 Google offered in:
-[10]<a >हिन्दी />
-[11]<a >বাংলা />
-[12]<a >తెలుగు />
-[13]<a >मराठी />
-[14]<a >தமிழ் />
-[15]<a >ગુજરાતી />
-[16]<a >ಕನ್ನಡ />
-[17]<a >മലയാളം />
-[18]<a >ਪੰਜਾਬੀ />
+[12]<a >हिन्दी />
+[13]<a >বাংলা />
+[14]<a >తెలుగు />
+[15]<a >मराठी />
+[16]<a >தமிழ் />
+[17]<a >ગુજરાતી />
+[18]<a >ಕನ್ನಡ />
+[19]<a >മലയാളം />
+[20]<a >ਪੰਜਾਬੀ />
 India
-[19]<a >About />
-[20]<a >Advertising />
-[21]<a >Business />
-[22]<a >How Search works />
-[23]<a >Privacy />
-[24]<a >Terms />
-[25]<div aria-expanded='false' role='button'>Settings />
+[21]<a >Advertising />
+[22]<a >Business />
+[23]<a >How Search works />
+[24]<a >Privacy />
+[25]<a >Terms />
+[26]<div aria-expanded='false' role='button'>Settings />
 [End of page]
-Current step: 1/100Current date and time: 2025-06-01 11:21
+Current step: 1/100Current date and time: 2025-06-06 11:08
 
  RESPONSE
 {
   "current_state": {
     "evaluation_previous_goal": "Unknown - I have just started the task and need to search for Netflix on Google.",
-    "memory": "I need to go to netflix.com and then go to the sign-up page.",
-    "next_goal": "Search for netflix on google"
+    "memory": "I have not yet started the task.",
+    "next_goal": "Search for Netflix on Google."
   },
   "action": [
     {

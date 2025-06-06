@@ -83,9 +83,8 @@ Common action sequences:
   Your responses must be always JSON with the specified format.
 
  HumanMessage 
-Your ultimate task is: """1.Go to netflix.com
-            2. Go to the sign up page.
-            """. If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
+Your ultimate task is: """1. Go to netflix.com
+        2. Go to the sign up page.""". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
 
  HumanMessage 
 Example output:
@@ -138,14 +137,14 @@ Ready to watch? Enter your email to create or restart your membership.
 [2]<input type='email' name='email' value='' />
 [3]<button type='submit'>Get Started />
 ... 2136 pixels below - scroll or extract content to see more ...
-Current step: 3/100Current date and time: 2025-06-01 11:22
+Current step: 3/100Current date and time: 2025-06-06 11:09
 
  RESPONSE
 {
   "current_state": {
-    "evaluation_previous_goal": "I successfully navigated to netflix.com.",
-    "memory": "I need to go to netflix.com and then go to the sign-up page. I have navigated to netflix.com.",
-    "next_goal": "Go to the sign-up page."
+    "evaluation_previous_goal": "Success - I successfully navigated to netflix.com.",
+    "memory": "I have navigated to netflix.com.",
+    "next_goal": "Go to the sign up page."
   },
   "action": [
     {

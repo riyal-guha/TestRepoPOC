@@ -83,9 +83,8 @@ Common action sequences:
   Your responses must be always JSON with the specified format.
 
  HumanMessage 
-Your ultimate task is: """1.Go to netflix.com
-            2. Go to the sign up page.
-            """. If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
+Your ultimate task is: """1. Go to netflix.com
+        2. Go to the sign up page.""". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
 
  HumanMessage 
 Example output:
@@ -149,7 +148,7 @@ Interactive elements from top layer of the current page inside the viewport:
 			[26]<div  />
 				[27]<div >Netflix />
 				[28]<div >https://www.netflix.com />
-[29]<div aria-label='About this result for Netflix' role='button' />
+[29]<div aria-label='About this result related to Netflix' role='button' />
 	[30]<span  />
 Netflix
 is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected ...
@@ -163,7 +162,7 @@ is a streaming service that offers a wide variety of award-winning TV shows, mov
 				[38]<div  />
 					[39]<cite role='text'>https://play.google.com
 › store › apps › details › id=com... />
-[40]<div aria-label='About this result for Google Play' role='button' />
+[40]<div aria-label='About this result related to Google Play' role='button' />
 	[41]<span  />
 We add TV shows and movies all the time.
 Browse new titles or search for your favorites
@@ -178,7 +177,7 @@ Browse new titles or search for your favorites
 				[49]<div  />
 					[50]<cite role='text'>https://en.wikipedia.org
 › wiki › Netflix />
-[51]<div aria-label='About this result for Wikipedia' role='button' />
+[51]<div aria-label='About this result related to Wikipedia' role='button' />
 	[52]<span  />
 Netflix is
 an American subscription video on-demand over-the-top streaming service
@@ -191,30 +190,29 @@ an American subscription video on-demand over-the-top streaming service
 			[58]<div  />
 				[59]<div >Instagram · netflix />
 				[60]<div >3.7Cr+ followers />
-[61]<div aria-label='About this result for Instagram' role='button' />
+[61]<div aria-label='About this result related to Instagram' role='button' />
 	[62]<span  />
-37M followers · 1.5K+ following · 10950 posts · @
-netflix
-: “~ official michael and lovie stan account ~”
-[63]<a >Netflix />
+The Straw Hats are setting sail like never before, Nakama!
+ONE PIECE meets LEGO Bricks in a new era of play
+! Pre-order today and become King of the Bricks!
+[63]<div  />
 	[64]<div  />
-		[65]<div  />
-			[66]<span  />
-				[67]<div  />
-			[68]<div  />
-				[69]<div >YouTube · Netflix />
-				[70]<div >3Cr+ followers />
-[71]<div aria-label='About this result for YouTube' role='button' />
-	[72]<span  />
-... 1010 pixels below - scroll or extract content to see more ...
-Current step: 2/100Current date and time: 2025-06-01 11:21
+		[65]<span  />
+			[66]<div  />
+		[67]<div  />
+			[68]<div >LinkedIn · Netflix />
+			[69]<div >1.1Cr+ followers />
+[70]<div aria-label='About this result related to LinkedIn' role='button' />
+	[71]<span  />
+... 1031 pixels below - scroll or extract content to see more ...
+Current step: 2/100Current date and time: 2025-06-06 11:09
 
  RESPONSE
 {
   "current_state": {
-    "evaluation_previous_goal": "Success - I have successfully searched for Netflix on Google.",
-    "memory": "I need to go to netflix.com and then go to the sign-up page. I have searched for Netflix on Google.",
-    "next_goal": "Go to netflix.com by clicking on the link in the google search results"
+    "evaluation_previous_goal": "Success - I successfully searched for Netflix on Google.",
+    "memory": "I have searched for Netflix on Google.",
+    "next_goal": "Go to netflix.com."
   },
   "action": [
     {
