@@ -11,7 +11,7 @@ Create a .env file in the scripts folder and under GOOGLE_API_KEY place you gemi
 
 To run the azure service bus emulator:
 - install WSL
-- install Docker Engine
+- install Docker Desktop or Podman Desktop
 
 in the environment variable set the config.json path and a password
 run docker compose -f "path to docker-compose.yml" up -d
