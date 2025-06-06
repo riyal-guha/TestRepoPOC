@@ -15,6 +15,8 @@ To run the azure service bus emulator:
 
 in the environment variable set the config.json path and a password
 run docker compose -f "path to docker-compose.yml" up -d
+                    OR
+run podman compose -f "path to docker-compose.yaml" up -ds
 verify in Docker Desktop UI and check logs
 
 For Integration with azure service bus emulator install 2 more dependencies
