@@ -141,19 +141,19 @@ India
 [25]<a >Terms />
 [26]<div aria-expanded='false' role='button'>Settings />
 [End of page]
-Current step: 1/100Current date and time: 2025-06-06 11:08
+Current step: 1/100Current date and time: 2025-06-06 11:41
 
  RESPONSE
 {
   "current_state": {
-    "evaluation_previous_goal": "Unknown - I have just started the task and need to search for Netflix on Google.",
-    "memory": "I have not yet started the task.",
-    "next_goal": "Search for Netflix on Google."
+    "evaluation_previous_goal": "Unknown - I have just started the task and need to go to netflix.com",
+    "memory": "I need to go to netflix.com and then navigate to the sign-up page.",
+    "next_goal": "Go to netflix.com"
   },
   "action": [
     {
-      "search_google": {
-        "query": "netflix"
+      "go_to_url": {
+        "url": "https://netflix.com"
       }
     }
   ]

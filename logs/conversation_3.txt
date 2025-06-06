@@ -108,116 +108,39 @@ Action result: 🔗  Opened new tab with https://www.google.com
 
 
  HumanMessage 
-Action result: 🔍  Searched for "netflix" in Google
+Action result: 🔗  Navigated to https://netflix.com
 
  HumanMessage 
 [Task history memory ends]
 [Current state starts here]
 The following is one-time information - if you need to remember it write it to memory:
-Current url: https://www.google.com/search?q=netflix&udm=14
+Current url: https://www.netflix.com/in/
 Available tabs:
-[TabInfo(page_id=0, url='https://www.google.com/', title='Google', parent_page_id=None), TabInfo(page_id=1, url='https://www.google.com/search?q=netflix&udm=14', title='netflix - Google Search', parent_page_id=None)]
+[TabInfo(page_id=0, url='https://www.netflix.com/in/', title='Netflix India – Watch TV Shows Online, Watch Movies Online', parent_page_id=None)]
 Interactive elements from top layer of the current page inside the viewport:
 [Start of page]
-[0]<a title='Go to Google Home' />
-[1]<textarea value='netflix' aria-label='Search' placeholder='' aria-expanded='false' name='q' role='combobox'>netflix />
-[2]<div  />
-	[3]<div aria-label='Clear' role='button' />
-[4]<div aria-label='Search by image' role='button' />
-[5]<button aria-label='Search' type='submit' />
-	[6]<div  />
-[7]<div aria-label='Settings' role='button' />
-	[8]<div >Quick Settings />
-[9]<a aria-label='Google apps' aria-expanded='false' role='button' />
-[10]<a >Sign in />
-[11]<a role='link'>All />
-[12]<a role='link'>Forums />
-[13]<a role='link'>Short videos />
-[14]<a role='link'>Flights />
-[15]<a role='link'>Web />
-[16]<a role='link'>Finance />
-[17]<a role='link'>Videos />
-[18]<div aria-expanded='false' role='button' />
-	[19]<div >More />
-[20]<div aria-expanded='false' role='button'>Tools />
-[21]<a >Netflix - Watch TV Shows Online, Watch Movies Online />
-	[22]<div  />
-		[23]<div  />
-			[24]<span  />
-				[25]<div  />
-			[26]<div  />
-				[27]<div >Netflix />
-				[28]<div >https://www.netflix.com />
-[29]<div aria-label='About this result related to Netflix' role='button' />
-	[30]<span  />
-Netflix
-is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected ...
-[31]<a >Netflix – Apps on Google Play />
-	[32]<div  />
-		[33]<div  />
-			[34]<span  />
-				[35]<div  />
-			[36]<div  />
-				[37]<div >Google Play />
-				[38]<div  />
-					[39]<cite role='text'>https://play.google.com
-› store › apps › details › id=com... />
-[40]<div aria-label='About this result related to Google Play' role='button' />
-	[41]<span  />
-We add TV shows and movies all the time.
-Browse new titles or search for your favorites
-, and stream videos right on your device. • The more you watch, the ...
-[42]<a >Netflix />
-	[43]<div  />
-		[44]<div  />
-			[45]<span  />
-				[46]<div  />
-			[47]<div  />
-				[48]<div >Wikipedia />
-				[49]<div  />
-					[50]<cite role='text'>https://en.wikipedia.org
-› wiki › Netflix />
-[51]<div aria-label='About this result related to Wikipedia' role='button' />
-	[52]<span  />
-Netflix is
-an American subscription video on-demand over-the-top streaming service
-. The service primarily distributes original and acquired films and ...
-[53]<a >Netflix US (@netflix) • Instagram photos and videos />
-	[54]<div  />
-		[55]<div  />
-			[56]<span  />
-				[57]<div  />
-			[58]<div  />
-				[59]<div >Instagram · netflix />
-				[60]<div >3.7Cr+ followers />
-[61]<div aria-label='About this result related to Instagram' role='button' />
-	[62]<span  />
-The Straw Hats are setting sail like never before, Nakama!
-ONE PIECE meets LEGO Bricks in a new era of play
-! Pre-order today and become King of the Bricks!
-[63]<div  />
-	[64]<div  />
-		[65]<span  />
-			[66]<div  />
-		[67]<div  />
-			[68]<div >LinkedIn · Netflix />
-			[69]<div >1.1Cr+ followers />
-[70]<div aria-label='About this result related to LinkedIn' role='button' />
-	[71]<span  />
-... 1031 pixels below - scroll or extract content to see more ...
-Current step: 2/100Current date and time: 2025-06-06 11:09
+[0]<select name='LanguageSelect'>English
+हिन्दी />
+[1]<a role='button'>Sign In />
+Unlimited movies, TV shows and more
+Starts at ₹149. Cancel at any time.
+Ready to watch? Enter your email to create or restart your membership.
+[2]<input type='email' name='email' value='' />
+[3]<button type='submit'>Get Started />
+... 2136 pixels below - scroll or extract content to see more ...
+Current step: 2/100Current date and time: 2025-06-06 11:41
 
  RESPONSE
 {
   "current_state": {
-    "evaluation_previous_goal": "Success - I successfully searched for Netflix on Google.",
-    "memory": "I have searched for Netflix on Google.",
-    "next_goal": "Go to netflix.com."
+    "evaluation_previous_goal": "Successfully navigated to netflix.com",
+    "memory": "Navigated to netflix.com. Now I need to go to the sign-up page.",
+    "next_goal": "Go to the sign-up page."
   },
   "action": [
     {
       "click_element_by_index": {
-        "index": 21
+        "index": 3
       }
     }
   ]

@@ -95,7 +95,21 @@
                    "ForwardDeadLetteredMessagesTo": "",
                    "ForwardTo": "",
                    "RequiresSession": false
-                 }
+                 },
+                 "Rules": [
+                   {
+                     "Name": "json-execution-engine",
+                     "Properties": {
+                       "FilterType": "Correlation",
+                       "CorrelationFilter": {
+                         "ContentType": "application/json",
+                         "Properties": {
+                           "eventType": "ExecutionEngine"
+                         }
+                       }
+                     }
+                   }
+                 ]
                }
              ]
            }

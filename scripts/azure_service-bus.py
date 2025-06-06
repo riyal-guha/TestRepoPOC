@@ -50,9 +50,10 @@ def passinfo(payload, result):
     modified_payload['eventType'] = "ExecutionEngine"
     modified_payload['timestamp'] = datetime.now(timezone.utc).isoformat()
     modified_payload['data']['action_status'] = result.is_done()
+
     return modified_payload
 
-async def send_message(servicebus_client):
+def create_test_payload():
     payload = {
     "messageId": "12345",
     "eventType": "ExecuteActionPlan",
@@ -65,6 +66,21 @@ async def send_message(servicebus_client):
         2. Go to the sign up page."""
             }
             }
+    return payload
+
+async def send_message(servicebus_client,payload):
+    # payload = {
+    # "messageId": "12345",
+    # "eventType": "ExecuteActionPlan",
+    # "timestamp": "2025-05-20T12:34:56Z",
+    # "data": {
+    #     "flowId": "flowId123",
+    #     "userId": "pnl0usXX",
+    #     "nlp": "Go to netflix.com and go to sign up page",
+    #     "actionPlan": """1. Go to netflix.com
+    #     2. Go to the sign up page."""
+    #         }
+    #         }
     # message = ServiceBusMessage("This is a Sample Message To Test The Working of Topic")
     sender = servicebus_client.get_topic_sender(topic_name=TOPIC_NAME)
     message = ServiceBusMessage(
@@ -77,10 +93,20 @@ async def send_message(servicebus_client):
     await sender.send_messages(message)
     print("Message sent to Topic:", message)
 
-async def receive_and_process_message(servicebus_client):
-    # servicebus_client = ServiceBusClient.from_connection_string(conn_str=CONNECTION_STR, logging_enable=True)
+async def send_modified_payload(servicebus_client, updated_payload):
+    sender = servicebus_client.get_topic_sender(topic_name=TOPIC_NAME)
+    async with sender:
+        message = ServiceBusMessage(
+            json.dumps(updated_payload),
+            content_type="application/json",
+            application_properties={
+                "eventType": "ExecutionEngine"
+            }
+        )
+        await sender.send_messages(message)
+        print("Modified payload sent back to topic.")
 
-    # async with servicebus_client:
+async def receive_and_process_message(servicebus_client):
         receiver = servicebus_client.get_subscription_receiver(
             topic_name=TOPIC_NAME,
             subscription_name=SUBSCRIPTION_NAME
@@ -98,8 +124,8 @@ async def receive_and_process_message(servicebus_client):
                 print("Execution Done:", result.is_done())
                 updated_payload = passinfo(payload, result)
                 print("Updated Payload:\n", json.dumps(updated_payload, indent=2))
-
                 await receiver.complete_message(msg)
+                await send_modified_payload(servicebus_client, updated_payload)
 
 
 # def receive_messages(receiver):
@@ -114,27 +140,21 @@ async def main():
     servicebus_client = ServiceBusClient.from_connection_string(conn_str=CONNECTION_STR, logging_enable=True)
 
     async with servicebus_client:
-        await send_message(servicebus_client)
+        payload = create_test_payload()
+        await send_message(servicebus_client,payload)
 
         print("⏳ Waiting for message to propagate...")
         await asyncio.sleep(2)  # brief wait to allow Service Bus to deliver the message
 
         await receive_and_process_message(servicebus_client)
+
 #     with servicebus_client:
-        # Sende messages to Queue
-        # sender = servicebus_client.get_queue_sender(queue_name=QUEUE_NAME)
-        # with sender:
-        #     send_message(sender)
 
         # Send Messages to Topic
         # sender = servicebus_client.get_topic_sender(topic_name=TOPIC_NAME)
         # with sender:
         #     send_message(sender)
 
-        # Recieve messages from Queue
-        # receiver = servicebus_client.get_queue_receiver(queue_name=QUEUE_NAME)
-        # with receiver:
-        #     receive_messages(receiver)
 
         # Receive messages from Topic Subscription
         # receiver = servicebus_client.get_subscription_receiver(
