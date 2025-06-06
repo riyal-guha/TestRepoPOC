@@ -69,19 +69,6 @@ def create_test_payload():
     return payload
 
 async def send_message(servicebus_client,payload):
-    # payload = {
-    # "messageId": "12345",
-    # "eventType": "ExecuteActionPlan",
-    # "timestamp": "2025-05-20T12:34:56Z",
-    # "data": {
-    #     "flowId": "flowId123",
-    #     "userId": "pnl0usXX",
-    #     "nlp": "Go to netflix.com and go to sign up page",
-    #     "actionPlan": """1. Go to netflix.com
-    #     2. Go to the sign up page."""
-    #         }
-    #         }
-    # message = ServiceBusMessage("This is a Sample Message To Test The Working of Topic")
     sender = servicebus_client.get_topic_sender(topic_name=TOPIC_NAME)
     message = ServiceBusMessage(
     json.dumps(payload),  # JSON body
@@ -148,21 +135,6 @@ async def main():
 
         await receive_and_process_message(servicebus_client)
 
-#     with servicebus_client:
-
-        # Send Messages to Topic
-        # sender = servicebus_client.get_topic_sender(topic_name=TOPIC_NAME)
-        # with sender:
-        #     send_message(sender)
-
-
-        # Receive messages from Topic Subscription
-        # receiver = servicebus_client.get_subscription_receiver(
-        #     topic_name=TOPIC_NAME,
-        #     subscription_name=SUBSCRIPTION_NAME
-        # )
-        # with receiver:
-        #     receive_messages(receiver)
 
 if __name__ == "__main__":
     asyncio.run(main())
