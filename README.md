@@ -23,3 +23,13 @@ pip install azure-identity
 
 The connection String is going to be
 "Endpoint=sb://localhost:5672;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=SAS_KEY_VALUE;UseDevelopmentEmulator=true;"
+
+
+Few changes that have been done to the subscriptions are
+subscription 2 has been set to only contain json's and eventType as ExecuteActionPlan
+Subscription 3 has been set to only contain json's and eventType as PythonEngine
+
+Run the azure_service-bus.py file with you modified payload if you want to get the browser use api to automate your task which is action Plan.
+
+Flow of Working
+Hardcoded Payload ->-> azure service bus -> pulled to python execution engine -> proccess the message and execute with browser-use -> generate return json ->-> push message to azure service bus 
