@@ -83,8 +83,8 @@ Common action sequences:
   Your responses must be always JSON with the specified format.
 
  HumanMessage 
-Your ultimate task is: """1. Go to netflix.com
-        2. Go to the sign up page.""". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
+Your ultimate task is: """1. Go to amazon.com
+        2. Search for macbook pro.""". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
 
  HumanMessage 
 Example output:
@@ -122,7 +122,7 @@ Interactive elements from top layer of the current page inside the viewport:
 [9]<input value='Google Search' aria-label='Google Search' name='btnK' role='button' type='submit' />
 [10]<input value='I'm Feeling Lucky' aria-label='I'm Feeling Lucky' name='btnI' type='submit' />
 Google Gemini,
-[11]<a role='link'>create a cricket quiz game to play with my friend />
+[11]<a role='link'>tell me how to fix my AC />
 Google offered in:
 [12]<a >हिन्दी />
 [13]<a >বাংলা />
@@ -141,19 +141,19 @@ India
 [25]<a >Terms />
 [26]<div aria-expanded='false' role='button'>Settings />
 [End of page]
-Current step: 1/100Current date and time: 2025-06-06 11:41
+Current step: 1/100Current date and time: 2025-06-12 00:20
 
  RESPONSE
 {
   "current_state": {
-    "evaluation_previous_goal": "Unknown - I have just started the task and need to go to netflix.com",
-    "memory": "I need to go to netflix.com and then navigate to the sign-up page.",
-    "next_goal": "Go to netflix.com"
+    "evaluation_previous_goal": "Unknown - I have just opened the browser and need to navigate to the Amazon website.",
+    "memory": "I need to go to amazon.com and search for macbook pro.",
+    "next_goal": "Navigate to amazon.com"
   },
   "action": [
     {
       "go_to_url": {
-        "url": "https://netflix.com"
+        "url": "https://www.amazon.com"
       }
     }
   ]

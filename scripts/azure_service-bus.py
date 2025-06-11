@@ -93,6 +93,29 @@ async def send_modified_payload(servicebus_client, updated_payload):
         await sender.send_messages(message)
         print("Modified payload sent back to topic.")
 
+# async def receive_and_process_message(servicebus_client):
+#         receiver = servicebus_client.get_subscription_receiver(
+#             topic_name=TOPIC_NAME,
+#             subscription_name=SUBSCRIPTION_NAME
+#         )
+
+#         async with receiver:
+#             received_msgs = await receiver.receive_messages(max_message_count=1, max_wait_time=10)
+#             for msg in received_msgs:
+#                 payload = json.loads(str(msg))
+#                 print("Received Payload:\n", json.dumps(payload, indent=2))
+
+#                 result = await execute_agent_with_json(payload)
+
+#                 # Print result and updated payload
+#                 print("Execution Done:", result.is_done())
+#                 updated_payload = passinfo(payload, result)
+#                 print("Updated Payload:\n", json.dumps(updated_payload, indent=2))
+#                 await receiver.complete_message(msg)
+#                 await send_modified_payload(servicebus_client, updated_payload)
+
+
+
 async def receive_and_process_message(servicebus_client):
         receiver = servicebus_client.get_subscription_receiver(
             topic_name=TOPIC_NAME,
@@ -100,9 +123,11 @@ async def receive_and_process_message(servicebus_client):
         )
 
         async with receiver:
-            received_msgs = await receiver.receive_messages(max_message_count=1, max_wait_time=10)
-            for msg in received_msgs:
-                payload = json.loads(str(msg))
+            # received_msgs = await receiver.receive_messages(max_message_count=1, max_wait_time=10)
+            async for msg in receiver:
+                body_bytes = b"".join([b for b in msg.body])
+                body_str = body_bytes.decode("utf-8")
+                payload = json.loads(body_str)
                 print("Received Payload:\n", json.dumps(payload, indent=2))
 
                 result = await execute_agent_with_json(payload)
@@ -127,11 +152,11 @@ async def main():
     servicebus_client = ServiceBusClient.from_connection_string(conn_str=CONNECTION_STR, logging_enable=True)
 
     async with servicebus_client:
-        payload = create_test_payload()
-        await send_message(servicebus_client,payload)
+        # payload = create_test_payload()
+        # await send_message(servicebus_client,payload)
 
-        print("⏳ Waiting for message to propagate...")
-        await asyncio.sleep(2)  # brief wait to allow Service Bus to deliver the message
+        # print("⏳ Waiting for message to propagate...")
+        # await asyncio.sleep(2)  # brief wait to allow Service Bus to deliver the message
 
         await receive_and_process_message(servicebus_client)
 
