@@ -1,9 +1,12 @@
  SystemMessage 
 You are an AI agent that helps users with web browsing tasks.
+Remember an important rule: Always open a new tab and then follow the task to be executed
 
  HumanMessage 
-Your ultimate task is: """1. Go to amazon.com
-        2. Search for macbook pro.""". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
+Your ultimate task is: """1.Go to netflix.com
+            2. Go to the sign up page.
+            3. End of Task.
+            """. If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
 
  HumanMessage 
 Example output:
@@ -27,134 +30,39 @@ Action result: 🔗  Opened new tab with https://www.google.com
 
 
  HumanMessage 
-Action result: 🔗  Navigated to https://www.amazon.com
+Action result: 🔗  Opened new tab with https://www.netflix.com
 
  HumanMessage 
 [Task history memory ends]
 [Current state starts here]
 The following is one-time information - if you need to remember it write it to memory:
-Current url: https://www.amazon.com/
+Current url: https://www.netflix.com/in/
 Available tabs:
-[TabInfo(page_id=0, url='https://www.amazon.com/', title='Amazon.com. Spend less. Smile more.', parent_page_id=None)]
+[TabInfo(page_id=0, url='https://www.google.com/', title='Google', parent_page_id=None), TabInfo(page_id=1, url='https://www.netflix.com/in/', title='Netflix India – Watch TV Shows Online, Watch Movies Online', parent_page_id=None)]
 Interactive elements from top layer of the current page inside the viewport:
 [Start of page]
-[0]<a aria-label='Amazon'>.us />
-[1]<a role='button' />
-	[2]<div >Deliver to
-India />
-[3]<input type='text' value='' name='field-keywords' placeholder='Search Amazon' aria-label='Search Amazon' role='searchbox' aria-expanded='false' />
-[4]<div  />
-	[5]<input type='submit' value='Go' />
-[6]<a aria-label='Choose a language for shopping in Amazon United States. The current selection is English (EN).
-' />
-	[7]<span  />
-		[8]<span >EN />
-[9]<button aria-label='Expand to Change Language or Country' />
-[10]<a >Account & Lists />
-	[11]<div >Hello, sign in />
-[12]<button aria-label='Expand Account and Lists' />
-[13]<a >Returns
-& Orders />
-[14]<a aria-label='0 items in cart' />
-	[15]<div >0 />
-	[16]<div >Cart />
-[17]<a >Sign in />
-New customer?
-[18]<a aria-label='New to Amazon? Start here to create an account'>Start here. />
-We're showing you items that ship to
-India
-. To see items that ship to a different country, change your delivery address.
-[19]<span >Dismiss />
-	[20]<input type='submit' />
-[21]<span >Change Address />
-	[22]<input type='submit' />
-[23]<a role='button' aria-label='Open All Categories Menu' aria-expanded='false'>All />
-[24]<a >Sell />
-[25]<a  />
-	[26]<i >Previous slide />
-[27]<a  />
-	[28]<i >Next slide />
-You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery.
-[29]<a >Click here to go to amazon.in />
-Top categories in Kitchen appliances
-[30]<a aria-label='Cooker' />
-	[31]<div  />
-		[32]<div  />
-	[33]<span  />
-		[34]<span >Cooker
-Cooker />
-[35]<a aria-label='Coffee' />
-	[36]<div  />
-		[37]<div  />
-	[38]<span  />
-		[39]<span >Coffee
-Coffee />
-[40]<a aria-label='Pots and Pans' />
-	[41]<div  />
-		[42]<div  />
-	[43]<span  />
-		[44]<span >Pots and Pans
-Pots and Pans />
-[45]<a aria-label='Kettles' />
-	[46]<div  />
-		[47]<div  />
-	[48]<span  />
-		[49]<span >Kettles
-Kettles />
-Shop for your home essentials
-[50]<a aria-label='Cleaning Tools' />
-	[51]<div  />
-	[52]<div >Cleaning Tools />
-[53]<a aria-label='Home Storage' />
-	[54]<div  />
-	[55]<div >Home Storage />
-[56]<a aria-label='Home Decor' />
-	[57]<div  />
-	[58]<div >Home Decor />
-[59]<a aria-label='Bedding' />
-	[60]<div  />
-	[61]<div >Bedding />
-New home arrivals under $50
-[62]<a aria-label='Kitchen & dining' />
-	[63]<div  />
-	[64]<div >Kitchen & Dining />
-[65]<a aria-label='Home improvement' />
-	[66]<div  />
-	[67]<div >Home Improvement />
-[68]<a aria-label='Décor' />
-	[69]<div  />
-	[70]<div >Décor />
-[71]<a aria-label='Bedding & bath' />
-	[72]<div  />
-	[73]<div >Bedding & Bath />
-Shop Fashion for less
-[74]<a aria-label='Jeans under $50' />
-	[75]<div  />
-	[76]<div >Jeans under $50 />
-[77]<a aria-label='Tops under $25' />
-	[78]<div  />
-	[79]<div >Tops under $25 />
-[80]<a aria-label='Dresses under $30' />
-	[81]<div  />
-	[82]<div >Dresses under $30 />
-[83]<a aria-label='Shoes under $50' />
-	[84]<div  />
-	[85]<div >Shoes under $50 />
-... 4926 pixels below - scroll or extract content to see more ...
-Current step: 2/100Current date and time: 2025-06-13 00:09
+[0]<select name='LanguageSelect'>English
+हिन्दी />
+[1]<a role='button'>Sign In />
+Unlimited movies, TV shows and more
+Starts at ₹149. Cancel at any time.
+Ready to watch? Enter your email to create or restart your membership.
+[2]<input type='email' name='email' value='' />
+[3]<button type='submit'>Get Started />
+... 2117 pixels below - scroll or extract content to see more ...
+Current step: 2/100Current date and time: 2025-06-13 00:30
 
  RESPONSE
 {
   "current_state": {
-    "evaluation_previous_goal": "Go to amazon.com",
-    "memory": "Successfully navigated to amazon.com",
-    "next_goal": "Search for macbook pro."
+    "evaluation_previous_goal": "Opened Netflix",
+    "memory": "Opened Netflix",
+    "next_goal": "Go to the sign up page"
   },
   "action": [
     {
-      "input_text": {
-        "index": 3,
-        "text": "macbook pro"
+      "click_element_by_index": {
+        "index": 1
       }
     }
   ]
