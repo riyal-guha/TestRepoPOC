@@ -21,9 +21,13 @@ def process_action_plan(input_json):
     action_plan = input_json.get("data", {}).get("actionPlan", "")
     return action_plan
 
+def process_override_system_message(input_json):
+    override_system_message = input_json.get("data", {}).get("overrideSystemPrompt", "")
+    return override_system_message
 
 async def execute_agent_with_json(input_json):
     action_plan = process_action_plan(input_json)
+    override_system_message = process_override_system_message(input_json)
     llm = ChatGoogleGenerativeAI(model='gemini-2.0-flash-exp')
 
     initial_actions = [
@@ -38,6 +42,7 @@ async def execute_agent_with_json(input_json):
         task=action_plan,
         initial_actions=initial_actions,
         llm=llm,
+        override_system_message=override_system_message,
         browser_session=browser_session,
         generate_gif=True,
         save_conversation_path="logs/conversation"

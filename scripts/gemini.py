@@ -11,8 +11,13 @@ def process_action_plan(input_json):
     action_plan = input_json.get("data", {}).get("actionPlan", "")
     return action_plan
 
+def process_override_system_message(input_json):
+    override_system_message = input_json.get("data", {}).get("overrideSystemPrompt", "")
+    return override_system_message
+
 async def execute_agent_with_json(input_json):
     action_plan = process_action_plan(input_json)
+    override_system_message = process_override_system_message(input_json)
     llm = ChatGoogleGenerativeAI(model='gemini-2.0-flash-exp')
     initial_actions = [
 	{'open_tab': {'url': 'https://www.google.com'}},
@@ -26,6 +31,7 @@ async def execute_agent_with_json(input_json):
         task=action_plan,
         initial_actions=initial_actions,
         llm=llm,
+        override_system_message=override_system_message,
         browser_session=browser_session,  # Set to True to generate GIFs
         generate_gif=True,
         save_conversation_path="logs/conversation"  # Set to True to generate screenshots
@@ -51,7 +57,9 @@ async def main():
             "nlp": "Go to netflix.com and go to sign up page",
             "actionPlan": """1.Go to netflix.com
             2. Go to the sign up page.
-            """
+            3. End of Task.
+            """,
+            "overrideSystemPrompt": "You are an AI agent that helps users with web browsing tasks."
         }
     }
 

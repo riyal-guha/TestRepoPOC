@@ -19,7 +19,8 @@ def create_test_payload():
         "userId": "pnl0usXX",
         "nlp": "Go to amazon.com and search for macbook pro",
         "actionPlan": """1. Go to amazon.com
-        2. Search for macbook pro."""
+        2. Search for macbook pro.""",
+        "overrideSystemPrompt": "You are an AI agent that helps users with web browsing tasks.",
             }
             }
     return payload
