@@ -31,7 +31,7 @@ Few changes that have been done to the subscriptions are
 subscription 2 has been set to only contain json's and eventType as ExecuteActionPlan
 Subscription 3 has been set to only contain json's and eventType as PythonEngine
 
-Run the azure_service-bus.py file with you modified payload if you want to get the browser use api to automate your task which is action Plan.
+Run the azure_service-bus.py file to start the service as a listener, it will keep listening for messages in Subscription.2 and execute them with the LLM agent.
 
 Flow of Working
-Hardcoded Payload ->-> azure service bus -> pulled to python execution engine -> proccess the message and execute with browser-use -> generate return json ->-> push message to azure service bus 
+Run the service bus.py files to run as listener -> run Seperate Script to push message to service bus ->-> listener gets the message and LLM automatically does the job with action plan in message -> Listener returns a message with action status back in to the topic of service bus
