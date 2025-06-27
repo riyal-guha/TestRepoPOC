@@ -1,0 +1,12 @@
+{
+  "task_id": "Allrecipes--3",
+  "web_name": "https://www.allrecipes.com/",
+  "start_time": "2025-06-28 00:30:16.902413",
+  "end_time": "2025-06-28 00:36:58.914111",
+  "duration_seconds": 402.011698,
+  "num_steps": 21,
+  "success": "failed",
+  "task_prompt": "Locate a recipe for vegan chocolate chip cookies with over 60 reviews and a rating of at least 4.5 stars on Allrecipes. on https://www.allrecipes.com/",
+  "final_answer": "<NO FINAL ANSWER>",
+  "gpt_4v_res": ""
+}

@@ -6,13 +6,13 @@ import json
 
 CONNECTION_STR = "Endpoint=sb://localhost:5672;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=SAS_KEY_VALUE;UseDevelopmentEmulator=true;"  
 QUEUE_NAME = "queue.1" 
-TOPIC_NAME = "topic.1"
-SUBSCRIPTION_NAME = "subscription.2"
+TOPIC_NAME = "request"
+SUBSCRIPTION_NAME = "processed"
 
 def create_test_payload():
     payload = {
     "messageId": "12345",
-    "eventType": "ExecuteActionPlan",
+    "eventType": "CreateActionPlan",
     "timestamp": "2025-05-20T12:34:56Z",
     "data": {
         "flowId": "flowId123",
@@ -31,7 +31,7 @@ async def send_message(servicebus_client,payload):
     json.dumps(payload),  # JSON body
     content_type="application/json",
     application_properties={
-        "eventType": "ExecuteActionPlan",
+        "eventType": "CreateActionPlan",
     }
 )
     await sender.send_messages(message)

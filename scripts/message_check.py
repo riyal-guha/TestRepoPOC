@@ -6,8 +6,8 @@ import asyncio
 
 CONNECTION_STR = "Endpoint=sb://localhost:5672;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=SAS_KEY_VALUE;UseDevelopmentEmulator=true;"  
 QUEUE_NAME = "queue.1" 
-TOPIC_NAME = "topic.1"
-SUBSCRIPTION_NAME = "subscription.3"
+TOPIC_NAME = "status"
+SUBSCRIPTION_NAME = "updates"
 
 async def receive_message(servicebus_client):
         receiver = servicebus_client.get_subscription_receiver(

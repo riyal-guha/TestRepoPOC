@@ -22,7 +22,7 @@
     
          "Topics": [
            {
-             "Name": "topic.1",
+             "Name": "request",
              "Properties": {
                "DefaultMessageTimeToLive": "PT1H",
                "DuplicateDetectionHistoryTimeWindow": "PT20S",
@@ -60,7 +60,7 @@
                  ]
                },
                {
-                 "Name": "subscription.2",
+                 "Name": "processed",
                  "Properties": {
                    "DeadLetteringOnMessageExpiration": false,
                    "DefaultMessageTimeToLive": "PT1H",
@@ -78,7 +78,7 @@
                        "CorrelationFilter": {
                         "ContentType": "application/json",
                          "Properties": {
-                           "eventType": "ExecuteActionPlan"
+                           "eventType": "CreateActionPlan"
                          }
                        }
                      }
@@ -86,7 +86,7 @@
                  ]
                },
                {
-                 "Name": "subscription.3",
+                 "Name": "status",
                  "Properties": {
                    "DeadLetteringOnMessageExpiration": false,
                    "DefaultMessageTimeToLive": "PT1H",
@@ -112,6 +112,42 @@
                  ]
                }
              ]
+           },
+           {
+              "Name": "status",
+              "Properties": {
+                "DefaultMessageTimeToLive": "PT1H",
+                "DuplicateDetectionHistoryTimeWindow": "PT20S",
+                "RequiresDuplicateDetection": false
+              },
+              "Subscriptions": [
+                {
+                  "Name": "updates",
+                  "Properties": {
+                    "DeadLetteringOnMessageExpiration": false,
+                    "DefaultMessageTimeToLive": "PT1H",
+                    "LockDuration": "PT1M",
+                    "MaxDeliveryCount": 10,
+                    "ForwardDeadLetteredMessagesTo": "",
+                    "ForwardTo": "",
+                    "RequiresSession": false
+                  },
+                  "Rules": [
+                   {
+                     "Name": "json-execution-engine",
+                     "Properties": {
+                       "FilterType": "Correlation",
+                       "CorrelationFilter": {
+                         "ContentType": "application/json",
+                         "Properties": {
+                           "eventType": "ExecutionEngine"
+                         }
+                       }
+                     }
+                   }
+                 ]
+                }
+              ]
            }
          ]
        }

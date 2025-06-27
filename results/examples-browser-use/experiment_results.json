@@ -1,0 +1,32 @@
+{
+  "total_tasks": 2,
+  "total_success": 0,
+  "total_failed": 2,
+  "total_unknown": 0,
+  "all_tasks": [
+    {
+      "task_id": "Allrecipes--3",
+      "web_name": "https://www.allrecipes.com/",
+      "start_time": "2025-06-28 00:30:16.902413",
+      "end_time": "2025-06-28 00:36:58.914111",
+      "duration_seconds": 402.011698,
+      "num_steps": 21,
+      "success": "failed",
+      "task_prompt": "Locate a recipe for vegan chocolate chip cookies with over 60 reviews and a rating of at least 4.5 stars on Allrecipes. on https://www.allrecipes.com/",
+      "final_answer": "<NO FINAL ANSWER>",
+      "gpt_4v_res": ""
+    },
+    {
+      "task_id": "Allrecipes--1",
+      "web_name": "https://www.allrecipes.com/",
+      "start_time": "2025-06-28 00:36:58.922832",
+      "end_time": "2025-06-28 00:37:34.894347",
+      "duration_seconds": 35.971515,
+      "num_steps": 3,
+      "success": "failed",
+      "task_prompt": "Find a recipe for a vegetarian lasagna that has at least a four-star rating and uses zucchini. on https://www.allrecipes.com/",
+      "final_answer": "<NO FINAL ANSWER>",
+      "gpt_4v_res": ""
+    }
+  ]
+}
