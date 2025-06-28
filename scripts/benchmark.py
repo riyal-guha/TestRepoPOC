@@ -308,6 +308,7 @@ async def main(max_concurrent_tasks: int, model_provider: str) -> None:
                 wait_for_network_idle_page_load_time=5,
                 maximum_wait_page_load_time=20,
                 viewport={"width": 1280, "height": 1100},
+                executable_path='C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
                 # trace_path=str(results_dir / task_id)  # Only if using tracing
                 )
 
