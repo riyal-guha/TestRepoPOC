@@ -1,0 +1,12 @@
+{
+  "task_id": "Amazon--0",
+  "web_name": "https://www.amazon.com/",
+  "start_time": "2025-06-28 20:09:56.099334",
+  "end_time": "2025-06-28 20:20:48.557291",
+  "duration_seconds": 652.457957,
+  "num_steps": 27,
+  "success": "failed",
+  "task_prompt": "Fetch iPhone 15 price from Amazon.com on https://www.amazon.com/",
+  "final_answer": "<NO FINAL ANSWER>",
+  "gpt_4v_res": ""
+}

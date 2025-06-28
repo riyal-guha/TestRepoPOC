@@ -166,11 +166,25 @@ def get_llm_model_generator(
         # Force reload environment variables
         load_dotenv(override=True)
 
-        if model_provider == "google/gemini-1.5-flash":
+        if model_provider == "azure":
+            # Create fresh instances each time, reading current env vars
+            west_eu = LLMModel(
+                model=AzureChatOpenAI(
+                    model="gpt-4o",
+                    api_version="2024-10-21",
+                    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT_WEST_EU", ""),
+                    api_key=SecretStr(os.getenv("AZURE_OPENAI_API_KEY_WEST_EU", "")),
+                ),
+                token_limit=900,
+            )
+            yield west_eu.model
+
+        elif model_provider == "google/gemini-1.5-flash":
             llm = ChatGoogleGenerativeAI(
                 model="gemini-1.5-flash",
             )
             yield llm
+            
         else:
             raise ValueError(f"Invalid model provider: {model_provider}")
 
@@ -308,7 +322,7 @@ async def main(max_concurrent_tasks: int, model_provider: str) -> None:
                 wait_for_network_idle_page_load_time=5,
                 maximum_wait_page_load_time=20,
                 viewport={"width": 1280, "height": 1100},
-                executable_path='C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+                
                 # trace_path=str(results_dir / task_id)  # Only if using tracing
                 )
 
@@ -369,10 +383,7 @@ if __name__ == "__main__":
             help="Model provider (default: azure)",
             choices=[
                 "azure",
-                "anthropic",
                 "google/gemini-1.5-flash",
-                "google/gemini-1.5-flash-8b",
-                "google/gemini-1.5-pro",
             ],
         )
         args = parser.parse_args()
