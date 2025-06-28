@@ -184,7 +184,7 @@ def get_llm_model_generator(
                 model="gemini-1.5-flash",
             )
             yield llm
-            
+
         else:
             raise ValueError(f"Invalid model provider: {model_provider}")
 
@@ -216,7 +216,7 @@ async def process_single_task(
                 generate_gif=False,
             )
 
-            history = await agent.run(max_steps=30)
+            history = await agent.run(max_steps=15)
             history.save_to_file(task_dir / "history.json")
 
             eval_result, gpt_4v_res = await auto_eval_by_gpt4o(
