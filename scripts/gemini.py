@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 from browser_use import Agent, BrowserSession
 from datetime import datetime,timezone
+from benchmark_int import benchmark
 
 def process_action_plan(input_json):
     action_plan = input_json.get("data", {}).get("actionPlan", "")
@@ -24,17 +25,18 @@ async def execute_agent_with_json(input_json):
     override_system_message = process_override_system_message(input_json)
     extend_system_message = process_extend_system_message(input_json)
     llm = ChatGoogleGenerativeAI(model='gemini-2.0-flash-exp')
-    initial_actions = [
-	{'open_tab': {'url': 'https://www.google.com'}},
-]
+#     initial_actions = [
+# 	{'open_tab': {'url': 'https://www.google.com'}},
+# ]
     browser_session = BrowserSession(
     # Path to a specific Chromium-based executable (optional)
+    headless=True,  # Set to True to run in headless mode
     executable_path='C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
     # user_data_dir='~/.config/browseruse/profiles/default',   # this is the default
 )
     agent = Agent(
         task=action_plan,
-        initial_actions=initial_actions,
+        # initial_actions=initial_actions,
         llm=llm,
         override_system_message=override_system_message,
         extend_system_message=extend_system_message,
@@ -43,6 +45,7 @@ async def execute_agent_with_json(input_json):
         save_conversation_path="logs/conversation"  # Set to True to generate screenshots
     )
     result = await agent.run()
+    await benchmark(result,single_task=input_json["data"],max_concurrent_tasks=1,model_provider="google/gemini-1.5-flash")
     return result
 
 def passinfo(payload,result):
@@ -78,6 +81,7 @@ async def main():
     # print(result.extracted_content())
     # print(result.model_actions())
     print(result.is_done())
+    print(type(result))
     print(json.dumps(passinfo(payload, result), indent=2))
 
 asyncio.run(main())

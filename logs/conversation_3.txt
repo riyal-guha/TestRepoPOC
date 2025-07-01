@@ -20,9 +20,6 @@ Browser started
  HumanMessage 
 [Your task history memory starts here]
 
- HumanMessage 
-Action result: 🔗  Opened new tab with https://www.google.com
-
  AIMessage 
 
 
@@ -36,28 +33,29 @@ Action result: 🔗  Opened new tab with https://www.netflix.com
 [Task history memory ends]
 [Current state starts here]
 The following is one-time information - if you need to remember it write it to memory:
-Current url: https://www.netflix.com/in/
+Current url: https://www.netflix.com/
 Available tabs:
-[TabInfo(page_id=0, url='https://www.google.com/', title='Google', parent_page_id=None), TabInfo(page_id=1, url='https://www.netflix.com/in/', title='Netflix India – Watch TV Shows Online, Watch Movies Online', parent_page_id=None)]
+[TabInfo(page_id=0, url='https://www.netflix.com/', title='Netflix - Watch TV Shows Online, Watch Movies Online', parent_page_id=None)]
 Interactive elements from top layer of the current page inside the viewport:
 [Start of page]
 [0]<select name='LanguageSelect'>English
-हिन्दी />
+Español />
 [1]<a role='button'>Sign In />
-Unlimited movies, TV shows and more
-Starts at ₹149. Cancel at any time.
+Unlimited movies, TV shows, and more
+Starts at ₹149. Cancel anytime.
 Ready to watch? Enter your email to create or restart your membership.
 [2]<input type='email' name='email' value='' />
 [3]<button type='submit'>Get Started />
-... 2117 pixels below - scroll or extract content to see more ...
-Current step: 2/100Current date and time: 2025-06-13 00:30
+Trending Now
+... 2146 pixels below - scroll or extract content to see more ...
+Current step: 2/100Current date and time: 2025-07-02 00:46
 
  RESPONSE
 {
   "current_state": {
-    "evaluation_previous_goal": "Opened Netflix",
-    "memory": "Opened Netflix",
-    "next_goal": "Go to the sign up page"
+    "evaluation_previous_goal": "Go to netflix.com",
+    "memory": "Opened netflix.com",
+    "next_goal": "Go to the sign up page."
   },
   "action": [
     {

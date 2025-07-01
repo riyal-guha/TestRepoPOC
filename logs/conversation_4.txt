@@ -20,9 +20,6 @@ Browser started
  HumanMessage 
 [Your task history memory starts here]
 
- HumanMessage 
-Action result: 🔗  Opened new tab with https://www.google.com
-
  AIMessage 
 
 
@@ -45,9 +42,9 @@ Action result: 🖱️  Clicked button with index 1: Sign In
 [Task history memory ends]
 [Current state starts here]
 The following is one-time information - if you need to remember it write it to memory:
-Current url: https://www.netflix.com/in/login
+Current url: https://www.netflix.com/login
 Available tabs:
-[TabInfo(page_id=0, url='https://www.google.com/', title='Google', parent_page_id=None), TabInfo(page_id=1, url='https://www.netflix.com/in/login', title='Netflix', parent_page_id=None)]
+[TabInfo(page_id=0, url='https://www.netflix.com/login', title='Netflix', parent_page_id=None)]
 Interactive elements from top layer of the current page inside the viewport:
 [Start of page]
 [0]<a >Netflix />
@@ -56,7 +53,7 @@ Sign In
 [2]<input type='password' name='password' value='' />
 [3]<button type='submit'>Sign In />
 OR
-[4]<button type='button'>Use a sign-in code />
+[4]<button type='button'>Use a Sign-In Code />
 [5]<a >Forgot password? />
 [6]<input type='checkbox' name='rememberMe' value='true' />
 [7]<label >Remember me />
@@ -64,15 +61,25 @@ New to Netflix?
 [8]<a >Sign up now. />
 This page is protected by Google reCAPTCHA to ensure you're not a bot.
 [9]<button role='link' type='button'>Learn more. />
-... 372 pixels below - scroll or extract content to see more ...
-Current step: 3/100Current date and time: 2025-06-13 00:30
+Questions? Call
+[10]<a >000-800-919-1743 (Toll-Free) />
+[11]<a >FAQ />
+[12]<a >Help Center />
+[13]<a >Terms of Use />
+[14]<a >Privacy />
+[15]<a >Cookie Preferences />
+[16]<a >Corporate Information />
+[17]<select name='LanguageSelect'>English
+Español />
+... 78 pixels below - scroll or extract content to see more ...
+Current step: 3/100Current date and time: 2025-07-02 00:46
 
  RESPONSE
 {
   "current_state": {
-    "evaluation_previous_goal": "Go to the sign up page",
-    "memory": "Go to the sign up page",
-    "next_goal": "End of task"
+    "evaluation_previous_goal": "Go to the sign up page.",
+    "memory": "Clicked sign in button",
+    "next_goal": "End of Task."
   },
   "action": [
     {
