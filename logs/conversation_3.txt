@@ -3,9 +3,10 @@ You are an AI agent that helps users with web browsing tasks.
 Remember an important rule: Always open a new tab and then follow the task to be executed
 
  HumanMessage 
-Your ultimate task is: """1.Go to netflix.com
-            2. Go to the sign up page.
-            3. End of Task.
+Your ultimate task is: """1.Go to Amazon.in
+            2. Search for iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black
+            3. Get the Product's Price.
+            4. End of Task
             """. If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
 
  HumanMessage 
@@ -27,40 +28,178 @@ Browser started
 
 
  HumanMessage 
-Action result: 🔗  Opened new tab with https://www.netflix.com
+Action result: 🔗  Opened new tab with https://www.amazon.in
 
  HumanMessage 
 [Task history memory ends]
 [Current state starts here]
 The following is one-time information - if you need to remember it write it to memory:
-Current url: https://www.netflix.com/
+Current url: https://www.amazon.in/
 Available tabs:
-[TabInfo(page_id=0, url='https://www.netflix.com/', title='Netflix - Watch TV Shows Online, Watch Movies Online', parent_page_id=None)]
+[TabInfo(page_id=0, url='https://www.amazon.in/', title='Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in', parent_page_id=None)]
 Interactive elements from top layer of the current page inside the viewport:
 [Start of page]
-[0]<select name='LanguageSelect'>English
-Español />
-[1]<a role='button'>Sign In />
-Unlimited movies, TV shows, and more
-Starts at ₹149. Cancel anytime.
-Ready to watch? Enter your email to create or restart your membership.
-[2]<input type='email' name='email' value='' />
-[3]<button type='submit'>Get Started />
-Trending Now
-... 2146 pixels below - scroll or extract content to see more ...
-Current step: 2/100Current date and time: 2025-07-02 00:46
+[0]<a aria-label='Amazon.in'>.in />
+[1]<a role='button' />
+	[2]<div >Delivering to Kolkata 700029
+Update location />
+[3]<input type='text' value='' name='field-keywords' placeholder='Search Amazon.in' aria-label='Search Amazon.in' role='searchbox' aria-expanded='false' />
+[4]<div  />
+	[5]<input type='submit' value='Go' />
+[6]<a aria-label='Choose a language for shopping in Amazon India. The current selection is English (EN).
+' />
+	[7]<span  />
+		[8]<span >EN />
+[9]<button aria-label='Expand to Change Language or Country' />
+[10]<a >Account & Lists />
+	[11]<div >Hello, sign in />
+[12]<button aria-label='Expand Account and Lists' />
+[13]<a >Returns
+& Orders />
+[14]<a aria-label='0 items in cart' />
+	[15]<div >0 />
+	[16]<div >Cart />
+[17]<a role='button' aria-label='Open All Categories Menu' aria-expanded='false'>All />
+[18]<a >Fresh />
+[19]<button aria-expanded='false' aria-label='Fresh Details' />
+[20]<a >MX Player />
+[21]<a >Sell />
+[22]<a >Bestsellers />
+[23]<a >Today's Deals />
+[24]<a >Mobiles />
+[25]<a >Prime />
+[26]<button aria-expanded='false' aria-label='Prime Details' />
+[27]<a >Customer Service />
+[28]<a >New Releases />
+[29]<a >Fashion />
+[30]<a >Amazon Pay />
+[31]<a >Electronics />
+[32]<a >Home & Kitchen />
+[33]<a >Computers />
+[34]<a >Books />
+[35]<a >Car & Motorbike />
+[36]<a >Video Games />
+[37]<a >Toys & Games />
+[38]<a >Grocery & Gourmet Foods />
+[39]<a  />
+	[40]<i >Previous slide />
+[41]<a  />
+	[42]<i >Next slide />
+Appliances for your home | Up to 55% off
+[43]<a aria-label='ACs' />
+	[44]<div  />
+	[45]<div >Air conditioners />
+[46]<a aria-label='Refrigerators' />
+	[47]<div  />
+	[48]<div >Refrigerators />
+[49]<a aria-label='Microwaves' />
+	[50]<div  />
+	[51]<div >Microwaves />
+[52]<a aria-label='Washing machines' />
+	[53]<div  />
+	[54]<div >Washing machines />
+[55]<a aria-label='Appliances for your home | Up to 55% off - See more' />
+	[56]<span >See more
+See more />
+Deals revealed | Prime Day
+[57]<a  />
+	[58]<div  />
+		[59]<div  />
+	[60]<div  />
+		[61]<span >See all offers
+See all offers />
+Revamp your home in style
+[62]<a aria-label='Cushion covers, bedsheets & more' />
+	[63]<div  />
+	[64]<div >Cushion covers, bedsheets & more />
+[65]<a aria-label='Figurines, vases & more' />
+	[66]<div  />
+	[67]<div >Figurines, vases & more />
+[68]<a aria-label='Home storage' />
+	[69]<div  />
+	[70]<div >Home storage />
+[71]<a aria-label='Lighting solutions' />
+	[72]<div  />
+	[73]<div >Lighting solutions />
+[74]<a aria-label='Revamp your home in style - Explore all' />
+	[75]<span >Explore all
+Explore all />
+Under ₹499 | Deals on home improvement essentials
+[76]<a aria-label='Cleaning' />
+	[77]<div  />
+	[78]<div >Under ₹199 | Cleaning supplies />
+[79]<a aria-label='Bath accessories' />
+	[80]<div  />
+	[81]<div >Under ₹399 | Bathroom accessories />
+[82]<a aria-label='Home tools' />
+	[83]<div  />
+	[84]<div >Under ₹499 | Home tools />
+[85]<a aria-label='Wallpapers' />
+	[86]<div  />
+	[87]<div >Under ₹299 | Wallpapers />
+[88]<a aria-label='Under ₹499 | Deals on home improvement essentials - Explore all' />
+	[89]<span >Explore all
+Explore all />
+PlayStation 5 Slim & Accessories | 
+No Cost EMI*
+[90]<a aria-label='PS5 Slim digital edition' />
+	[91]<div  />
+	[92]<div >PS5 Slim digital edition />
+[93]<a aria-label='PS5 Slim disc edition' />
+	[94]<div  />
+	[95]<div >PS5 Slim disc edition />
+[96]<a >PS5 Slim Fortnite digital edition />
+	[97]<div  />
+[98]<a >PS5 DualSense Wireless Controller />
+	[99]<div  />
+Starting ₹149 | Headphones
+[100]<a aria-label='boAt' />
+	[101]<div  />
+	[102]<div >Starting ₹249 | boAt />
+[103]<a aria-label='boult' />
+	[104]<div  />
+	[105]<div >Starting ₹349 | boult />
+[106]<a aria-label='Noise'>Starting ₹649 | Noise />
+	[107]<div  />
+[108]<a >Starting ₹149 | Zebronics />
+	[109]<div  />
+Automotive essentials | Up to 60% off
+[110]<a aria-label='Cleaning accessories' />
+	[111]<div  />
+	[112]<div >Cleaning accessories />
+[113]<a aria-label='Tyre & rim care' />
+	[114]<div  />
+	[115]<div >Tyre & rim care />
+[116]<a >Helmets />
+	[117]<div  />
+[118]<a >Vacuum cleaner />
+	[119]<div  />
+Starting ₹199 | Amazon Brands & more
+[120]<a aria-label='Starting ₹199 | Bedsheets' />
+	[121]<div  />
+	[122]<div >Starting ₹199 | Bedsheets />
+[123]<a aria-label='Starting ₹199 | Curtains' />
+	[124]<div  />
+	[125]<div >Starting ₹199 | Curtains />
+[126]<a >Minimum 40% off | Ironing board & more />
+	[127]<div  />
+[128]<a >Up to 60% off | Home decor />
+	[129]<div  />
+... 4468 pixels below - scroll or extract content to see more ...
+Current step: 2/100Current date and time: 2025-07-02 01:18
 
  RESPONSE
 {
   "current_state": {
-    "evaluation_previous_goal": "Go to netflix.com",
-    "memory": "Opened netflix.com",
-    "next_goal": "Go to the sign up page."
+    "evaluation_previous_goal": "Go to Amazon.in",
+    "memory": "Opened Amazon.in",
+    "next_goal": "Search for iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black"
   },
   "action": [
     {
-      "click_element_by_index": {
-        "index": 1
+      "input_text": {
+        "index": 3,
+        "text": "iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black"
       }
     }
   ]

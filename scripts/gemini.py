@@ -61,12 +61,13 @@ async def main():
         "eventType": "CreateActionPlan",
         "timestamp": "2025-05-20T12:34:56Z",
         "data": {
-            "flowId": "flowId123",
+            "flowId": "flowId231",
             "userId": "pnl0usXX",
             "nlp": "Go to netflix.com and go to sign up page",
-            "actionPlan": """1.Go to netflix.com
-            2. Go to the sign up page.
-            3. End of Task.
+            "actionPlan": """1.Go to Amazon.in
+            2. Search for iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black
+            3. Get the Product's Price.
+            4. End of Task
             """,
             "overrideSystemPrompt": "You are an AI agent that helps users with web browsing tasks.",
             "extendSystemPrompt": "Remember an important rule: Always open a new tab and then follow the task to be executed",
