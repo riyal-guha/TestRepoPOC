@@ -30,14 +30,14 @@ Available tabs:
 [TabInfo(page_id=0, url='about:blank', title='Setting up...', parent_page_id=None)]
 Interactive elements from top layer of the current page inside the viewport:
 empty page
-Current step: 1/100Current date and time: 2025-07-08 23:48
+Current step: 1/100Current date and time: 2025-07-09 01:23
 
  RESPONSE
 {
   "current_state": {
     "evaluation_previous_goal": "N/A",
     "memory": "N/A",
-    "next_goal": "Open Amazon.in"
+    "next_goal": "Go to Amazon.in"
   },
   "action": [
     {

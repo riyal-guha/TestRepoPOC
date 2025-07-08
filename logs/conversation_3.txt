@@ -141,27 +141,27 @@ No Cost EMI*
 No Cost EMI* - See all deals' />
 	[88]<span >See all deals
 See all deals />
-Starting ₹149 | Headphones
-[89]<a aria-label='boAt' />
-	[90]<div  />
-	[91]<div >Starting ₹249 | boAt />
-[92]<a aria-label='boult' />
-	[93]<div  />
-	[94]<div >Starting ₹349 | boult />
-[95]<a aria-label='Noise'>Starting ₹649 | Noise />
-	[96]<div  />
-[97]<a >Starting ₹149 | Zebronics />
-	[98]<div  />
 Under ₹499 | Deals on home improvement essentials
-[99]<a aria-label='Cleaning' />
+[89]<a aria-label='Cleaning' />
+	[90]<div  />
+	[91]<div >Under ₹199 | Cleaning supplies />
+[92]<a aria-label='Bath accessories' />
+	[93]<div  />
+	[94]<div >Under ₹399 | Bathroom accessories />
+[95]<a aria-label='Home tools'>Under ₹499 | Home tools />
+	[96]<div  />
+[97]<a aria-label='Wallpapers'>Under ₹299 | Wallpapers />
+	[98]<div  />
+Starting ₹149 | Headphones
+[99]<a aria-label='boAt' />
 	[100]<div  />
-	[101]<div >Under ₹199 | Cleaning supplies />
-[102]<a aria-label='Bath accessories' />
+	[101]<div >Starting ₹249 | boAt />
+[102]<a aria-label='boult' />
 	[103]<div  />
-	[104]<div >Under ₹399 | Bathroom accessories />
-[105]<a aria-label='Home tools'>Under ₹499 | Home tools />
+	[104]<div >Starting ₹349 | boult />
+[105]<a aria-label='Noise'>Starting ₹649 | Noise />
 	[106]<div  />
-[107]<a aria-label='Wallpapers'>Under ₹299 | Wallpapers />
+[107]<a >Starting ₹149 | Zebronics />
 	[108]<div  />
 Automotive essentials | Up to 60% off
 [109]<a aria-label='Cleaning accessories' />
@@ -186,13 +186,13 @@ Starting ₹199 | Amazon Brands & more
 [127]<a >Up to 60% off | Home decor />
 	[128]<div  />
 ... 4468 pixels below - scroll or extract content to see more ...
-Current step: 2/100Current date and time: 2025-07-08 23:48
+Current step: 2/100Current date and time: 2025-07-09 01:23
 
  RESPONSE
 {
   "current_state": {
-    "evaluation_previous_goal": "Open Amazon.in",
-    "memory": "Opened Amazon.in",
+    "evaluation_previous_goal": "Go to Amazon.in",
+    "memory": "I opened a new tab and navigated to Amazon.in",
     "next_goal": "Search for iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black"
   },
   "action": [
