@@ -39,6 +39,33 @@ Action result: 🔗  Opened new tab with https://www.amazon.in
  HumanMessage 
 Action result: ⌨️  Input iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black into index 3
 
+ AIMessage 
+
+
+ ToolMessage 
+
+
+ HumanMessage 
+Action result: 🖱️  Clicked button with index 5:
+
+ AIMessage 
+
+
+ ToolMessage 
+
+
+ HumanMessage 
+Action result: 🔗  Navigated to https://www.amazon.in
+
+ AIMessage 
+
+
+ ToolMessage 
+
+
+ HumanMessage 
+Action result: ⌨️  Input iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black into index 3
+
  HumanMessage 
 [Task history memory ends]
 [Current state starts here]
@@ -90,14 +117,14 @@ Update location />
 [36]<a >Video Games />
 [37]<a >Toys & Games />
 [38]<a >Grocery & Gourmet Foods />
-... 4468 pixels below - scroll or extract content to see more ...
-Current step: 3/100Current date and time: 2025-07-08 23:48
+... 1156 pixels below - scroll or extract content to see more ...
+Current step: 6/100Current date and time: 2025-07-02 20:04
 
  RESPONSE
 {
   "current_state": {
     "evaluation_previous_goal": "Search for iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black",
-    "memory": "Opened Amazon.in\nInput iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black",
+    "memory": "Opened Amazon.in",
     "next_goal": "Click search button"
   },
   "action": [

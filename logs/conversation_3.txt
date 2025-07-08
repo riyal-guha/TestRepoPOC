@@ -101,97 +101,97 @@ Appliances for your home | Up to 55% off
 [55]<a aria-label='Appliances for your home | Up to 55% off - See more' />
 	[56]<span >See more
 See more />
-Deals revealed | Prime Day
-[57]<a  />
+400+ New Launches | Prime Day | 12 - 14 July
+[57]<a aria-label='400+ New Launches | Prime Day | 12 - 14 July' />
 	[58]<div  />
-		[59]<div  />
-	[60]<div  />
-		[61]<span >See all offers
+[59]<a aria-label='400+ New Launches | Prime Day | 12 - 14 July - See all offers' />
+	[60]<span >See all offers
 See all offers />
 Revamp your home in style
-[62]<a aria-label='Cushion covers, bedsheets & more' />
-	[63]<div  />
-	[64]<div >Cushion covers, bedsheets & more />
-[65]<a aria-label='Figurines, vases & more' />
-	[66]<div  />
-	[67]<div >Figurines, vases & more />
-[68]<a aria-label='Home storage' />
-	[69]<div  />
-	[70]<div >Home storage />
-[71]<a aria-label='Lighting solutions' />
-	[72]<div  />
-	[73]<div >Lighting solutions />
-[74]<a aria-label='Revamp your home in style - Explore all' />
-	[75]<span >Explore all
-Explore all />
-Under ₹499 | Deals on home improvement essentials
-[76]<a aria-label='Cleaning' />
-	[77]<div  />
-	[78]<div >Under ₹199 | Cleaning supplies />
-[79]<a aria-label='Bath accessories' />
-	[80]<div  />
-	[81]<div >Under ₹399 | Bathroom accessories />
-[82]<a aria-label='Home tools' />
-	[83]<div  />
-	[84]<div >Under ₹499 | Home tools />
-[85]<a aria-label='Wallpapers' />
-	[86]<div  />
-	[87]<div >Under ₹299 | Wallpapers />
-[88]<a aria-label='Under ₹499 | Deals on home improvement essentials - Explore all' />
-	[89]<span >Explore all
+[61]<a aria-label='Cushion covers, bedsheets & more' />
+	[62]<div  />
+	[63]<div >Cushion covers, bedsheets & more />
+[64]<a aria-label='Figurines, vases & more' />
+	[65]<div  />
+	[66]<div >Figurines, vases & more />
+[67]<a aria-label='Home storage' />
+	[68]<div  />
+	[69]<div >Home storage />
+[70]<a aria-label='Lighting solutions' />
+	[71]<div  />
+	[72]<div >Lighting solutions />
+[73]<a aria-label='Revamp your home in style - Explore all' />
+	[74]<span >Explore all
 Explore all />
 PlayStation 5 Slim & Accessories | 
 No Cost EMI*
-[90]<a aria-label='PS5 Slim digital edition' />
-	[91]<div  />
-	[92]<div >PS5 Slim digital edition />
-[93]<a aria-label='PS5 Slim disc edition' />
-	[94]<div  />
-	[95]<div >PS5 Slim disc edition />
-[96]<a >PS5 Slim Fortnite digital edition />
-	[97]<div  />
-[98]<a >PS5 DualSense Wireless Controller />
-	[99]<div  />
+[75]<a aria-label='PS5 Slim digital edition' />
+	[76]<div  />
+	[77]<div >PS5 Slim digital edition />
+[78]<a aria-label='PS5 Slim disc edition' />
+	[79]<div  />
+	[80]<div >PS5 Slim disc edition />
+[81]<a aria-label='PS5 Slim Fortnite digital edition' />
+	[82]<div  />
+	[83]<div >PS5 Slim Fortnite digital edition />
+[84]<a aria-label='PS5 DualSense Wireless Controller' />
+	[85]<div  />
+	[86]<div >PS5 DualSense Wireless Controller />
+[87]<a aria-label='PlayStation 5 Slim & Accessories | 
+No Cost EMI* - See all deals' />
+	[88]<span >See all deals
+See all deals />
 Starting ₹149 | Headphones
-[100]<a aria-label='boAt' />
-	[101]<div  />
-	[102]<div >Starting ₹249 | boAt />
-[103]<a aria-label='boult' />
-	[104]<div  />
-	[105]<div >Starting ₹349 | boult />
-[106]<a aria-label='Noise'>Starting ₹649 | Noise />
-	[107]<div  />
-[108]<a >Starting ₹149 | Zebronics />
-	[109]<div  />
+[89]<a aria-label='boAt' />
+	[90]<div  />
+	[91]<div >Starting ₹249 | boAt />
+[92]<a aria-label='boult' />
+	[93]<div  />
+	[94]<div >Starting ₹349 | boult />
+[95]<a aria-label='Noise'>Starting ₹649 | Noise />
+	[96]<div  />
+[97]<a >Starting ₹149 | Zebronics />
+	[98]<div  />
+Under ₹499 | Deals on home improvement essentials
+[99]<a aria-label='Cleaning' />
+	[100]<div  />
+	[101]<div >Under ₹199 | Cleaning supplies />
+[102]<a aria-label='Bath accessories' />
+	[103]<div  />
+	[104]<div >Under ₹399 | Bathroom accessories />
+[105]<a aria-label='Home tools'>Under ₹499 | Home tools />
+	[106]<div  />
+[107]<a aria-label='Wallpapers'>Under ₹299 | Wallpapers />
+	[108]<div  />
 Automotive essentials | Up to 60% off
-[110]<a aria-label='Cleaning accessories' />
-	[111]<div  />
-	[112]<div >Cleaning accessories />
-[113]<a aria-label='Tyre & rim care' />
-	[114]<div  />
-	[115]<div >Tyre & rim care />
-[116]<a >Helmets />
-	[117]<div  />
-[118]<a >Vacuum cleaner />
-	[119]<div  />
+[109]<a aria-label='Cleaning accessories' />
+	[110]<div  />
+	[111]<div >Cleaning accessories />
+[112]<a aria-label='Tyre & rim care' />
+	[113]<div  />
+	[114]<div >Tyre & rim care />
+[115]<a >Helmets />
+	[116]<div  />
+[117]<a >Vacuum cleaner />
+	[118]<div  />
 Starting ₹199 | Amazon Brands & more
-[120]<a aria-label='Starting ₹199 | Bedsheets' />
-	[121]<div  />
-	[122]<div >Starting ₹199 | Bedsheets />
-[123]<a aria-label='Starting ₹199 | Curtains' />
-	[124]<div  />
-	[125]<div >Starting ₹199 | Curtains />
-[126]<a >Minimum 40% off | Ironing board & more />
-	[127]<div  />
-[128]<a >Up to 60% off | Home decor />
-	[129]<div  />
+[119]<a aria-label='Starting ₹199 | Bedsheets' />
+	[120]<div  />
+	[121]<div >Starting ₹199 | Bedsheets />
+[122]<a aria-label='Starting ₹199 | Curtains' />
+	[123]<div  />
+	[124]<div >Starting ₹199 | Curtains />
+[125]<a >Minimum 40% off | Ironing board & more />
+	[126]<div  />
+[127]<a >Up to 60% off | Home decor />
+	[128]<div  />
 ... 4468 pixels below - scroll or extract content to see more ...
-Current step: 2/100Current date and time: 2025-07-02 01:18
+Current step: 2/100Current date and time: 2025-07-08 23:48
 
  RESPONSE
 {
   "current_state": {
-    "evaluation_previous_goal": "Go to Amazon.in",
+    "evaluation_previous_goal": "Open Amazon.in",
     "memory": "Opened Amazon.in",
     "next_goal": "Search for iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black"
   },

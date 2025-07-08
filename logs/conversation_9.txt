@@ -55,6 +55,33 @@ Action result: 🖱️  Clicked button with index 5:
 
 
  HumanMessage 
+Action result: 🔗  Navigated to https://www.amazon.in
+
+ AIMessage 
+
+
+ ToolMessage 
+
+
+ HumanMessage 
+Action result: ⌨️  Input iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black into index 3
+
+ AIMessage 
+
+
+ ToolMessage 
+
+
+ HumanMessage 
+Action result: 🖱️  Clicked button with index 5:
+
+ AIMessage 
+
+
+ ToolMessage 
+
+
+ HumanMessage 
 Action result: 📄  Extracted from page
 : ```json
 {
@@ -63,6 +90,11 @@ Action result: 📄  Extracted from page
       "name": "iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black",
       "price": "₹73,500",
       "mrp": "₹79,900"
+    },
+    {
+      "name": "iPhone 16 256 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; White",
+      "price": "₹83,500",
+      "mrp": "₹89,900"
     },
     {
       "name": "iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; White",
@@ -76,7 +108,7 @@ Action result: 📄  Extracted from page
     },
     {
       "name": "iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Ultramarine",
-      "price": "₹73,500",
+      "price": "₹73,000",
       "mrp": "₹79,900"
     },
     {
@@ -100,14 +132,9 @@ Action result: 📄  Extracted from page
       "mrp": "₹89,900"
     },
     {
-      "name": "iPhone 16 Plus 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Pink",
-      "price": "₹83,500",
-      "mrp": "₹89,900"
-    },
-    {
-      "name": "iPhone 16 Plus 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; White",
-      "price": "₹83,500",
-      "mrp": "₹89,900"
+      "name": "iPhone 16e 128 GB: Built for Apple Intelligence, A18 Chip, Supersized Battery Life, 48MP Fusion. Camera, 15.40 cm (6.1″) Super Retina XDR Display; White",
+      "price": "₹53,600",
+      "mrp": "₹59,900"
     },
     {
       "name": "iPhone 16 512 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black",
@@ -115,22 +142,17 @@ Action result: 📄  Extracted from page
       "mrp": "₹1,09,900"
     },
     {
-      "name": "iPhone 16e 128 GB: Built for Apple Intelligence, A18 Chip, Supersized Battery Life, 48MP Fusion. Camera, 15.40 cm (6.1″) Super Retina XDR Display; White",
-      "price": "₹53,600",
-      "mrp": "₹59,900"
+      "name": "iPhone 16 Plus 256 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black",
+      "price": "₹93,500",
+      "mrp": "₹99,900"
     },
     {
-      "name": "iPhone 16 Pro 128 GB: 5G Mobile Phone with Camera Control, 4K 120 fps Dolby Vision and a Huge Leap in Battery Life. Works with AirPods; Black Titanium",
-      "price": "₹1,11,900",
-      "mrp": "₹1,19,900"
-    },
-    {
-      "name": "Apple iPhone 15 (128 GB) - Black",
-      "price": "₹60,200",
+      "name": "Apple iPhone 15 (128 GB) - Blue",
+      "price": "₹60,300",
       "mrp": "₹69,900"
     },
     {
-      "name": "iPhone 16 256 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; White",
+      "name": "iPhone 16 256 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Ultramarine",
       "price": "₹83,500",
       "mrp": "₹89,900"
     },
@@ -138,6 +160,11 @@ Action result: 📄  Extracted from page
       "name": "iPhone 16 256 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Teal",
       "price": "₹83,500",
       "mrp": "₹89,900"
+    },
+    {
+      "name": "iPhone 16 Pro 128 GB: 5G Mobile Phone with Camera Control, 4K 120 fps Dolby Vision and a Huge Leap in Battery Life. Works with AirPods; Desert Titanium",
+      "price": "₹1,11,900",
+      "mrp": "₹1,19,900"
     }
   ]
 }
@@ -147,9 +174,9 @@ Action result: 📄  Extracted from page
 [Task history memory ends]
 [Current state starts here]
 The following is one-time information - if you need to remember it write it to memory:
-Current url: https://www.amazon.in/s?k=iPhone+16+128+GB%3A+5G+Mobile+Phone+with+Camera+Control%2C+A18+Chip+and+a+Big+Boost+in+Battery+Life.+Works+with+AirPods%3B+Black&crid=3IBK6ZQHRSZNY&sprefix=iphone+16+128+gb+5g+mobile+phone+with+camera+control%2C+a18+chip+and+a+big+boost+in+battery+life.+works+with+airpods+black%2Caps%2C335&ref=nb_sb_noss
+Current url: https://www.amazon.in/s?k=iPhone+16+128+GB%3A+5G+Mobile+Phone+with+Camera+Control%2C+A18+Chip+and+a+Big+Boost+in+Battery+Life.+Works+with+AirPods%3B+Black&crid=3GKNV1F0EMJXL&sprefix=iphone+16+128+gb+5g+mobile+phone+with+camera+control%2C+a18+chip+and+a+big+boost+in+battery+life.+works+with+airpods+black%2Caps%2C254&ref=nb_sb_noss
 Available tabs:
-[TabInfo(page_id=0, url='https://www.amazon.in/s?k=iPhone+16+128+GB%3A+5G+Mobile+Phone+with+Camera+Control%2C+A18+Chip+and+a+Big+Boost+in+Battery+Life.+Works+with+AirPods%3B+Black&crid=3IBK6ZQHRSZNY&sprefix=iphone+16+128+gb+5g+mobile+phone+with+camera+control%2C+a18+chip+and+a+big+boost+in+battery+life.+works+with+airpods+black%2Caps%2C335&ref=nb_sb_noss', title='Amazon.in : iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black', parent_page_id=None)]
+[TabInfo(page_id=0, url='https://www.amazon.in/s?k=iPhone+16+128+GB%3A+5G+Mobile+Phone+with+Camera+Control%2C+A18+Chip+and+a+Big+Boost+in+Battery+Life.+Works+with+AirPods%3B+Black&crid=3GKNV1F0EMJXL&sprefix=iphone+16+128+gb+5g+mobile+phone+with+camera+control%2C+a18+chip+and+a+big+boost+in+battery+life.+works+with+airpods+black%2Caps%2C254&ref=nb_sb_noss', title='Amazon.in : iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black', parent_page_id=None)]
 Interactive elements from top layer of the current page inside the viewport:
 [Start of page]
 [0]<a aria-label='Amazon.in'>.in />
@@ -194,7 +221,7 @@ Update location />
 [36]<a >Video Games />
 [37]<a >Toys & Games />
 [38]<a >Grocery & Gourmet Foods />
-1-16 of 90 results for
+1-16 of 93 results for
 "iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black"
 [39]<span >Sort by:
 Featured />
@@ -205,8 +232,6 @@ Price, product page
 (8% off)
 Save extra with No Cost EMI
 Save extra with No Cost EMI
-FREE delivery
-Sat, 12 Jul
 Service: Installation />
 	[42]<a  />
 		[43]<div  />
@@ -214,7 +239,7 @@ Service: Installation />
 		[45]<h2 >iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black />
 	[46]<a aria-label='4.4 out of 5 stars, rating details' role='button' />
 		[47]<i >4.4 out of 5 stars />
-	[48]<a aria-label='909 ratings'>909 />
+	[48]<a aria-label='888 ratings'>888 />
 	[49]<a >M.R.P: ₹79,900 />
 		[50]<span >₹73,500 />
 			[51]<span >₹
@@ -228,123 +253,125 @@ Service: Installation />
 	[57]<span  />
 	[58]<span  />
 	[59]<span  />
-[60]<div role='listitem'>500+ bought in past month
+[60]<div role='listitem'>300+ bought in past month
 Price, product page
-(8% off)
+(7% off)
 Save extra with No Cost EMI
 Save extra with No Cost EMI
-FREE delivery
-Sat, 12 Jul
+Only 1 left in stock.
 Service: Installation />
 	[61]<a  />
 		[62]<div  />
 	[63]<a  />
-		[64]<h2 >iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; White />
+		[64]<h2 >iPhone 16 256 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; White />
 	[65]<a aria-label='4.4 out of 5 stars, rating details' role='button' />
 		[66]<i >4.4 out of 5 stars />
-	[67]<a aria-label='909 ratings'>909 />
-	[68]<a >M.R.P: ₹79,900 />
-		[69]<span >₹73,500 />
+	[67]<a aria-label='888 ratings'>888 />
+	[68]<a >M.R.P: ₹89,900 />
+		[69]<span >₹83,500 />
 			[70]<span >₹
-73,500 />
+83,500 />
 		[71]<div >M.R.P: />
-			[72]<span >₹79,900
-₹79,900 />
+			[72]<span >₹89,900
+₹89,900 />
 	[73]<button name='submit.addToCart' type='button'>Add to cart />
 	[74]<span  />
 	[75]<span  />
 	[76]<span  />
 	[77]<span  />
 	[78]<span  />
-[79]<div role='listitem'>200+ bought in past month
+[79]<div role='listitem'>1K+ bought in past month
 Price, product page
-(7% off)
+(8% off)
 Save extra with No Cost EMI
 Save extra with No Cost EMI
-FREE delivery
-Thu, 10 Jul
-Service: Installation
-Add to cart />
+Service: Installation />
 	[80]<a  />
 		[81]<div  />
 	[82]<a  />
-		[83]<h2 >iPhone 16 Plus 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black />
-	[84]<a aria-label='4.6 out of 5 stars, rating details' role='button' />
-		[85]<i >4.6 out of 5 stars />
-	[86]<a aria-label='410 ratings'>410 />
-	[87]<a >M.R.P: ₹89,900 />
-		[88]<span >₹83,500 />
+		[83]<h2 >iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; White />
+	[84]<a aria-label='4.4 out of 5 stars, rating details' role='button' />
+		[85]<i >4.4 out of 5 stars />
+	[86]<a aria-label='888 ratings'>888 />
+	[87]<a >M.R.P: ₹79,900 />
+		[88]<span >₹73,500 />
 			[89]<span >₹
-83,500 />
+73,500 />
 		[90]<div >M.R.P: />
-			[91]<span >₹89,900
-₹89,900 />
+			[91]<span >₹79,900
+₹79,900 />
+	[92]<button name='submit.addToCart' type='button'>Add to cart />
+	[93]<span  />
+	[94]<span  />
+	[95]<span  />
+	[96]<span  />
+	[97]<span  />
 Delivery Day
-[92]<a aria-label='Apply the filter Get It by Tomorrow to narrow results' role='link'>Get It by Tomorrow />
-	[93]<div  />
-		[94]<label  />
-[95]<a aria-label='Apply the filter Get It in 2 Days to narrow results' role='link'>Get It in 2 Days />
-	[96]<div  />
-		[97]<label  />
-Brands
-[98]<a aria-label='Apply the filter Apple to narrow results' role='link'>Apple />
+[98]<a aria-label='Apply the filter Get It by Tomorrow to narrow results' role='link'>Get It by Tomorrow />
 	[99]<div  />
 		[100]<label  />
+[101]<a aria-label='Apply the filter Get It in 2 Days to narrow results' role='link'>Get It in 2 Days />
+	[102]<div  />
+		[103]<label  />
+Brands
+[104]<a aria-label='Apply the filter Apple to narrow results' role='link'>Apple />
+	[105]<div  />
+		[106]<label  />
 Category
-[101]<a role='link'>Smartphones & Basic Mobiles />
-[102]<a role='link'>Smartphones />
-Customer Review
-[103]<a aria-label='Apply the filter 4 Stars & Up to narrow results' role='link'>& Up />
-	[104]<i >4 Stars />
+[107]<a role='link'>Smartphones & Basic Mobiles />
+[108]<a role='link'>Smartphones />
 Price
-[105]<label >₹185 />
+[109]<label >₹145 />
 –
-[106]<label >₹136,200+ />
-[107]<span >Go />
-	[108]<input aria-label='Go - Submit price range' type='submit' />
+[110]<label >₹136,200+ />
+[111]<span >Go />
+	[112]<input aria-label='Go - Submit price range' type='submit' />
 Deals & Discounts
-[109]<a role='link'>All Discounts />
-[110]<a role='link'>Today's Deals />
+[113]<a role='link'>All Discounts />
+[114]<a role='link'>Today's Deals />
+Customer Review
+[115]<a aria-label='Apply the filter 4 Stars & Up to narrow results' role='link'>& Up />
+	[116]<i >4 Stars />
 Storage Capacity
-[111]<a aria-label='Apply the filter 512 GB & above to narrow results' role='link'>512 GB & above />
-	[112]<div  />
-		[113]<label  />
-Battery Capacity
-[114]<a aria-label='Apply the filter Up to 2,999 mAh to narrow results' role='link'>Up to 2,999 mAh />
-	[115]<div  />
-		[116]<label  />
-Cellular Technology
-[117]<a aria-label='Apply the filter 5G to narrow results' role='link'>5G />
+[117]<a aria-label='Apply the filter 512 GB & above to narrow results' role='link'>512 GB & above />
 	[118]<div  />
 		[119]<label  />
+Battery Capacity
+[120]<a aria-label='Apply the filter Up to 2,999 mAh to narrow results' role='link'>Up to 2,999 mAh />
+	[121]<div  />
+		[122]<label  />
+Cellular Technology
+[123]<a aria-label='Apply the filter 5G to narrow results' role='link'>5G />
+	[124]<div  />
+		[125]<label  />
 Discount
-[120]<a role='link'>10% Off or more />
-[121]<a role='link'>25% Off or more />
-[122]<a role='link'>35% Off or more />
-[123]<a role='link'>50% Off or more />
-[124]<a role='link'>60% Off or more />
-[125]<a role='link'>70% Off or more />
+[126]<a role='link'>10% Off or more />
+[127]<a role='link'>25% Off or more />
+[128]<a role='link'>35% Off or more />
+[129]<a role='link'>50% Off or more />
+[130]<a role='link'>60% Off or more />
+[131]<a role='link'>70% Off or more />
 Item Condition
-[126]<a role='link'>New />
+[132]<a role='link'>New />
 Display Size
-[127]<a aria-label='Apply the filter 5.5 in & above to narrow results' role='link'>5.5 in & above />
-	[128]<div  />
-		[129]<label  />
+[133]<a aria-label='Apply the filter 5.5 in & above to narrow results' role='link'>5.5 in & above />
+	[134]<div  />
+		[135]<label  />
 Pay On Delivery
-... 5327 pixels below - scroll or extract content to see more ...
-Current step: 5/100Current date and time: 2025-07-08 23:49
+... 4648 pixels below - scroll or extract content to see more ...
+Current step: 8/100Current date and time: 2025-07-02 20:05
 
  RESPONSE
 {
   "current_state": {
     "evaluation_previous_goal": "Get the Product's Price.",
-    "memory": "Opened Amazon.in\nInput iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black\nClicked search button\nGot the Product's Price.",
+    "memory": "Opened Amazon.in",
     "next_goal": "End of Task"
   },
   "action": [
     {
       "done": {
-        "text": "The price of the iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black is \u20b973,500.",
+        "text": "The price of the iPhone 16 128 GB is \u20b973,500.",
         "success": true
       }
     }

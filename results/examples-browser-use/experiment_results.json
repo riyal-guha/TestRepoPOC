@@ -1,19 +1,24 @@
 {
   "total_tasks": 1,
-  "total_success": 1,
-  "total_failed": 0,
+  "total_success": 0,
+  "total_failed": 1,
   "total_unknown": 0,
   "all_tasks": [
     {
       "task_id": "flowId231",
-      "start_time": "2025-07-02 01:19:18.083657",
-      "end_time": "2025-07-02 01:19:22.680268",
-      "duration_seconds": 4.596611,
-      "num_steps": 5,
-      "success": "success",
-      "task_prompt": "1.Go to Amazon.in\n            2. Search for iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black\n            3. Get the Product's Price.\n            4. End of Task\n            ",
-      "final_answer": "The price of the iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black is \u20b973,500.",
-      "gpt_4v_res": "The provided screenshots show that the agent successfully navigated to Amazon.in (screenshot 1), searched for the specified iPhone model (screenshot 2), and located the product with its price listed as \u20b973,500 (screenshot 3 and 4).  The final response also correctly states the price as \u20b973,500.\n\nTherefore, the task was successfully completed.\n\nVerdict: SUCCESS"
+      "start_time": "2025-07-08 23:49:32.963397",
+      "end_time": "2025-07-08 23:49:38.970060",
+      "duration_seconds": 6.006663,
+      "num_steps_agent1": 5,
+      "num_steps_agent2": 5,
+      "verdict_agent1": "failed",
+      "verdict_agent2": "success",
+      "score_agent1": 80.0,
+      "score_agent2": 95.0,
+      "task_prompt": "Go to amazon.com and get iphone 16 128 GB Black's Price",
+      "final_answer_agent1": "Could not find the price of iphone 16 128 GB Black on amazon.com",
+      "final_answer_agent2": "The price of the iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; Black is \u20b973,500.",
+      "gpt_4v_res": "Agent 1:\n- Evaluation: Agent 1 failed to find the price of the iPhone 16 128 GB Black on amazon.com.  The screenshots show that the agent searched for the product but did not successfully extract the price.\n- Verdict: NOT SUCCESS\n- Confidence Score: 80\n\nAgent 2:\n- Evaluation: Agent 2 successfully located the price of the iPhone 16 128 GB Black on amazon.in (note the .in domain). The screenshots confirm the search and the price extraction from the product page.  The response accurately reflects the price shown.\n- Verdict: SUCCESS\n- Confidence Score: 95"
     }
   ]
 }

@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 from browser_use import Agent, BrowserSession
 from datetime import datetime,timezone
-from benchmark_int import benchmark
+from benchmark_stdalone import benchmark
 
 def process_action_plan(input_json):
     action_plan = input_json.get("data", {}).get("actionPlan", "")
@@ -45,7 +45,7 @@ async def execute_agent_with_json(input_json):
         save_conversation_path="logs/conversation"  # Set to True to generate screenshots
     )
     result = await agent.run()
-    await benchmark(result,single_task=input_json["data"],max_concurrent_tasks=1,model_provider="google/gemini-1.5-flash")
+    # await benchmark(result,single_task=input_json["data"],max_concurrent_tasks=1,model_provider="google/gemini-1.5-flash")
     return result
 
 def passinfo(payload,result):
@@ -56,7 +56,20 @@ def passinfo(payload,result):
     return modified_payload
 
 async def main():
-    payload = {
+    payload1 = {
+        "messageId": "12345",
+        "eventType": "CreateActionPlan",
+        "timestamp": "2025-05-20T12:34:56Z",
+        "data": {
+            "flowId": "flowId231",
+            "userId": "pnl0usXX",
+            "nlp": "Go to netflix.com and go to sign up page",
+            "actionPlan": """Go to amazon.com and get iphone 16 128 GB Black's Price""",
+            "overrideSystemPrompt": "You are an AI agent that helps users with web browsing tasks.",
+            "extendSystemPrompt": "Remember an important rule: Always open a new tab and then follow the task to be executed",
+        }
+    }
+    payload2 = {
         "messageId": "12345",
         "eventType": "CreateActionPlan",
         "timestamp": "2025-05-20T12:34:56Z",
@@ -74,15 +87,18 @@ async def main():
         }
     }
 
-    print(json.dumps(payload, indent=2))
+    # print(json.dumps(payload1, indent=2))
     
-    result = await execute_agent_with_json(payload)
+    result1 = await execute_agent_with_json(payload1)
+    result2 = await execute_agent_with_json(payload2)
     # print(result.screenshots())
     # print(result.action_names())
     # print(result.extracted_content())
     # print(result.model_actions())
-    print(result.is_done())
-    print(type(result))
-    print(json.dumps(passinfo(payload, result), indent=2))
+    print(result1.is_done())
+    print(result2.is_done())
+    await benchmark(result1=result1,result2=result2,single_task=payload1["data"],max_concurrent_tasks=1,model_provider="google/gemini-1.5-flash")
+    print(type(result1))
+    # print(json.dumps(passinfo(payload, result1), indent=2))
 
 asyncio.run(main())
